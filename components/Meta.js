@@ -7,7 +7,12 @@ const Meta = ({title, keywords, description}) => {
             <meta name='keywords' content={keywords} />
             <meta name='description' content={description} />
             <meta charSet='utf-8' />
-            <link rel='icon' href='/favicon.ico' />
+            <link rel='icon' href='assets/favicon_io/favicon.ico' />
+            {/* From favicon generator */}
+            <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+            <link rel="manifest" href="/site.webmanifest"></link>
             <title>{title}</title>
         </Head>
     )
