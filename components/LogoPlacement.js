@@ -26,7 +26,10 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonFx: {
         margin: "0 10px",
-        backgroundColor: "red"
+        border: "1px white solid",
+        '&:hover': {
+            backgroundColor: "hsl(0,0%,8%)"
+        }
     }
 }))
 
