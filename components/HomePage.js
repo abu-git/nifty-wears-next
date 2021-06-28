@@ -22,9 +22,6 @@ export default function HomePage() {
             <LogoPlacement />
             <AfterNav />
             <CssBaseline />
-            {/*<div className={classes.root}>
-                <CssBaseline />
-            </div>*/}
         </div>
     )
         

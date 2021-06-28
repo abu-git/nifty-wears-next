@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     appbar: {
         background: "none",
-        backgroundColor: "hsl(0, 0%, 3%)",
+        backgroundColor: "hsl(0, 0%, 3.5%)",
         /*height: '100px'*/
     },
     appbarWrapper: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "0 auto"
     },
     flexGroww: {
-        flexGrow: 1
+        flexGrow: 1,
     },
     logoTitle: {
         fontStyle: "italic"
@@ -42,9 +42,9 @@ export default function LogoPlacement () {
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.appbarWrapper}>
                     <IconButton>
-                        <img src="assets/favicon_io/favicon-32x32.png" />
+                        <img  src="assets/favicon_io/favicon-32x32.png" />
                     </IconButton>
-                    <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}>Nifty Wears</h1></Typography>
+                    <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}></h1></Typography>
                     <Button className={classes.buttonFx} color="inherit">Home</Button>
                     <Button className={classes.buttonFx} color="inherit">About</Button>
                     <Button className={classes.buttonFx} color="inherit">Shop</Button>

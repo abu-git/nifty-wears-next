@@ -14,6 +14,7 @@ const useStyles =  makeStyles((theme) => ({
     },
     showcasetext: {
         /*font: `"Yellowtail", cursive`,*/
+        textAlign: "center",
         fontSize: "1.8rem",
         fontStyle: "italic"
     }
@@ -26,7 +27,7 @@ export default function AfterNav() {
         <Container maxWidth="md">
         <Grid container>
             <Grid item xs={6} className={classes.landing}>
-                <Box className={classes.showcasetext}><h1>Specially crafted shirts for you.</h1></Box>
+                <Box className={classes.showcasetext}>30% off on your first buy<h1>Nifty Wears</h1></Box>
                 {/*<Box><p>shop with us</p></Box>*/}
             </Grid>
             <Grid item xs={6}>
