@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     appbar: {
         background: "none",
-        backgroundColor: "hsl(0, 0%, 4%)",
+        backgroundColor: "hsl(0, 0%, 3%)",
         /*height: '100px'*/
     },
     appbarWrapper: {
@@ -47,7 +47,8 @@ export default function LogoPlacement () {
                     <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}>Nifty Wears</h1></Typography>
                     <Button className={classes.buttonFx} color="inherit">Home</Button>
                     <Button className={classes.buttonFx} color="inherit">About</Button>
-                    <Button className={classes.buttonFx} color="inherit">Shop</Button>               
+                    <Button className={classes.buttonFx} color="inherit">Shop</Button>
+                    <Button className={classes.buttonFx} color="inherit">Contact</Button>                
                 </Toolbar>
             </AppBar>
         </div>
