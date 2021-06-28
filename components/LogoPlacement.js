@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
     logoTitle: {
         fontStyle: "italic"
+    },
+    buttonFx: {
+        margin: "0 10px"
     }
 }))
 
@@ -37,9 +40,9 @@ export default function LogoPlacement () {
                         <img src="assets/favicon_io/favicon-32x32.png" />
                     </IconButton>
                     <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}>Nifty Wears</h1></Typography>
-                    <Button color="inherit">Home</Button>
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Shop</Button>               
+                    <Button className={classes.buttonFx} color="inherit">Home</Button>
+                    <Button className={classes.buttonFx} color="inherit">About</Button>
+                    <Button className={classes.buttonFx} color="inherit">Shop</Button>               
                 </Toolbar>
             </AppBar>
         </div>
