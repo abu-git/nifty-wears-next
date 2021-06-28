@@ -1,22 +1,21 @@
 import Image from 'next/image'
-import { makeStyles } from "@material-ui/core"
+import { Grid, makeStyles, Container } from "@material-ui/core"
 import { Box } from "@material-ui/core"
-import imageChoice from "../data/nw-pic.png"
 
 
 const useStyles =  makeStyles((theme) => ({
-    landingImg :  {
-        /*backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5), url("assets/favicon_io/nw-pic.png"))`,
-        /*backgroundImage: `url(${imageChoice})`,*/
+    landing: {
         height: '450px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        position: 'relative',
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "100px"
+        marginTop: "50px",
+        /*border: "1px solid red"*/
+    },
+    showcasetext: {
+        font: `"Yellowtail", cursive`,
+        fontSize: "2rem",
+        fontStyle: "italic"
     }
 }))
 
@@ -24,13 +23,25 @@ export default function AfterNav() {
     const classes = useStyles()
 
     return(
-        <Box className={classes.landingImg}>
-            <Image 
-                src="/nw-pic.png"
-                alt="Nifty Wears Shop Promo"
-                width={1010}
-                height={450}
-            />
-        </Box>
+        <Container maxWidth="md">
+        <Grid container>
+            <Grid item xs={6} className={classes.landing}>
+                <Box className={classes.showcasetext}><h1>Specially crafted shirts for you.</h1></Box>
+                {/*<Box><p>shop with us</p></Box>*/}
+            </Grid>
+            <Grid item xs={6}>
+            <Box className={classes.landing} paddingTop="30px">
+                <Image 
+                    src="/model.jpg"
+                    alt="Nifty Wears Shop Promo"
+                    width={360}
+                    height={360}
+                />
+            </Box>
+            </Grid>
+            
+        </Grid>
+        </Container>
+        
     )
 }
