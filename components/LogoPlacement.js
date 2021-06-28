@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     appbar: {
         background: "none",
-        backgroundColor: "hsl(0, 0%, 5%)",
+        backgroundColor: "hsl(0, 0%, 4%)",
         /*height: '100px'*/
     },
     appbarWrapper: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         /*border: "1px white solid",*/
         '&:hover': {
             backgroundColor: "hsl(0,0%,8%)",
-            transform: "scale(0.98)"
+            transform: "scale(1.1)"
         }
     }
 }))

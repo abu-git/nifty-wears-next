@@ -13,8 +13,8 @@ const useStyles =  makeStyles((theme) => ({
         /*border: "1px solid red"*/
     },
     showcasetext: {
-        font: `"Yellowtail", cursive`,
-        fontSize: "2rem",
+        /*font: `"Yellowtail", cursive`,*/
+        fontSize: "1.8rem",
         fontStyle: "italic"
     }
 }))
@@ -26,11 +26,11 @@ export default function AfterNav() {
         <Container maxWidth="md">
         <Grid container>
             <Grid item xs={6} className={classes.landing}>
-                <Box className={classes.showcasetext}><h1>Specially crafted shirts for you.</h1></Box>
+                <Box className={classes.showcasetext}><h2>Specially crafted shirts for you.</h2></Box>
                 {/*<Box><p>shop with us</p></Box>*/}
             </Grid>
             <Grid item xs={6}>
-            <Box className={classes.landing} paddingTop="30px">
+            <Box className={classes.landing} paddingTop="40px">
                 <Image 
                     src="/model.jpg"
                     alt="Nifty Wears Shop Promo"
