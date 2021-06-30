@@ -4,8 +4,18 @@ import { Box } from "@material-ui/core"
 
 
 const useStyles =  makeStyles((theme) => ({
+    code: {
+        display: "block",
+        width: "max-content",
+        background: "white",
+        fontSize: "2em",
+        color: "black",
+        padding: "0.25em 0.5em",
+        borderRadius: "0.125em",
+        marginBottom: "0.05em"
+    },
     showcase: {
-        minHeight: "60vh",
+        minHeight: "50vh",
         backgroundImage: `url("/nifty-backdrop.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -36,6 +46,9 @@ const useStyles =  makeStyles((theme) => ({
             /*mixBlendMode: "difference"*/
         }
     },
+    containerMarginTop: {
+        marginTop: "80px"
+    }
     
 }))
 
@@ -43,12 +56,14 @@ export default function AfterNav() {
     const classes = useStyles()
 
     return(
-        <Container maxWidth="md">
+        <Container maxWidth="lg" className={classes.containerMarginTop}>
         <Grid container>
             <Grid item lg={12} sm={12} md={12} xs={12}>
                 <div className={classes.showcase}>
                     <div className={classes.showcaseIntro}>
-                        <p>30% off on your first buy</p><h1>Nifty Wears</h1>
+                        <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>
+                        <h1>Nifty Wears</h1>
+                        <p>Your one stop shop for specially clothing.</p>
                     </div>
                 </div>
                 {/*<Box className={classes.showcaseIntro}>30% off on your first buy<h1>Nifty Wears</h1></Box>*/}
