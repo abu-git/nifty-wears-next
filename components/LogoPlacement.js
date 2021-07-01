@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         /*height: '100px'*/
     },
     appbarWrapper: {
-        width: "80%",
+        width: "90%",
         margin: "0 auto"
     },
     flexGroww: {
@@ -27,9 +27,10 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonFx: {
         margin: "0 10px",
+        backgroundColor: "hsl(0, 0%, 6%)",
         /*border: "1px white solid",*/
         '&:hover': {
-            backgroundColor: "hsl(0,0%,8%)",
+            backgroundColor: "hsl(0,0%,8.7%)",
             transform: "scale(1.1)"
         }
     }
