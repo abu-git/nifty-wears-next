@@ -46,7 +46,7 @@ const useStyles =  makeStyles((theme) => ({
             mixBlendMode: "multiply"
         }
     },
-    containerMarginTop: {
+    showcaseMarginTop: {
         marginTop: "80px"
     },
     paper: {
@@ -55,7 +55,7 @@ const useStyles =  makeStyles((theme) => ({
         backgroundColor: "hsl(0, 0%, 6%)"
     },
     cardroot: {
-        maxWidth: 345,
+        maxWidth: 405,
         textAlign: "center",
         padding: 0
     },
@@ -65,6 +65,13 @@ const useStyles =  makeStyles((theme) => ({
     cardaction: {
         backgroundColor: "hsl(0, 0%, 6%)",
         color: "white"
+    },
+    griditem: {
+        margin: "0 auto",
+        padding: "2rem 4rem"
+    },
+    buttonmargin: {
+        margin: "0 auto"
     }
 }))
 
@@ -72,9 +79,10 @@ export default function AfterNav() {
     const classes = useStyles()
 
     return(
-        <Container maxWidth="lg" className={classes.containerMarginTop}>
+        <>
+        <Container maxWidth="lg" className={classes.showcaseMarginTop}>
         <Grid container>
-            <Grid item lg={12} sm={12} md={6} xs={12}>
+            <Grid item lg={12} sm={12} md={12} xs={12}>
                 <div className={classes.showcase}>
                     <div className={classes.showcaseIntro}>
                         <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>
@@ -84,69 +92,101 @@ export default function AfterNav() {
                 </div>
                 {/*<Box className={classes.showcaseIntro}>30% off on your first buy<h1>Nifty Wears</h1></Box>*/}
             </Grid>
-            
-            <Grid item lg={4} md={6} sm={12} xs={12} className={classes.containerMarginTop}>
-                {/*<Paper className={classes.paper}>*/}
-                    <Card className={classes.cardroot}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardmedia}
-                                image="/man1.jpg"
-                                title="Nifty Wears Model"
-                            />
-                            <CardContent className={classes.cardaction}>
-                                <h3>Brown Coat</h3>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions className={classes.cardaction}>
-                            <Button>Add to Cart</Button>
-                            <Button>Share</Button>
-                        </CardActions>
-                    </Card>
-                {/*</Paper>*/}
-            </Grid>
-            <Grid item lg={4} md={4} sm={12} xs={12} className={classes.containerMarginTop}>
-                {/*<Paper className={classes.paper}>*/}
-                    <Card className={classes.cardroot}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardmedia}
-                                image="/man2.jpg"
-                                title="Nifty Wears Model"
-                            />
-                            <CardContent className={classes.cardaction}>
-                                <h3>Red Coat</h3>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button>Add to Cart</Button>
-                            <Button>Share</Button>
-                        </CardActions>
-                    </Card>
-                {/*</Paper>*/}
-            </Grid>
-            <Grid item lg={4} md={4} sm={12} xs={12} className={classes.containerMarginTop}>
-                {/*<Paper className={classes.paper}>*/}
-                    <Card className={classes.cardroot}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardmedia}
-                                image="/man3.jpg"
-                                title="Nifty Wears Model"
-                            />
-                            <CardContent className={classes.cardaction}>
-                                <h3>White Shirt</h3>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button>Add to Cart</Button>
-                            <Button>Share</Button>
-                        </CardActions>
-                    </Card>
-                {/*</Paper>*/}
-            </Grid>            
         </Grid>
         </Container>
-        
+
+        <Container maxWidth="lg">
+            <Grid container className={classes.griditem}>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
+                    {/*<Paper className={classes.paper}>*/}
+                        <Card className={classes.cardroot}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.cardmedia}
+                                    image="/man1.jpg"
+                                    title="Nifty Wears Model"
+                                />
+                                <CardContent className={classes.cardaction}>
+                                    <h2>Brown Coat</h2>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions className={classes.cardaction}>
+                                <Box className={classes.buttonmargin}>
+                                    <h3 color="inherit"> $95.99</h3>
+                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    {/*</Paper>*/}
+                </Grid>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
+                    {/*<Paper className={classes.paper}>*/}
+                        <Card className={classes.cardroot}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.cardmedia}
+                                    image="/man2.jpg"
+                                    title="Nifty Wears Model"
+                                />
+                                <CardContent className={classes.cardaction}>
+                                    <h2>Red Coat</h2>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions className={classes.cardaction}>
+                                <Box className={classes.buttonmargin}>
+                                    <h3 color="inherit"> $90.99</h3>
+                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    {/*</Paper>*/}
+                </Grid>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
+                    {/*<Paper className={classes.paper}>*/}
+                        <Card className={classes.cardroot}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.cardmedia}
+                                    image="/man3.jpg"
+                                    title="Nifty Wears Model"
+                                />
+                                <CardContent className={classes.cardaction}>
+                                    <h2>White Shirt</h2>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions className={classes.cardaction}>
+                                <Box className={classes.buttonmargin}>
+                                    <h3 color="inherit"> $70.99</h3>
+                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    {/*</Paper>*/}
+                </Grid>
+                <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
+                    {/*<Paper className={classes.paper}>*/}
+                        <Card className={classes.cardroot}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.cardmedia}
+                                    image="/man3.jpg"
+                                    title="Nifty Wears Model"
+                                />
+                                <CardContent className={classes.cardaction}>
+                                    <h2>White Shirt</h2>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions className={classes.cardaction}>
+                                <Box className={classes.buttonmargin}>
+                                    <h3 color="inherit"> $70.99</h3>
+                                    <Button variant="outlined" color="inherit">Add to Cart</Button> 
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    {/*</Paper>*/}
+                </Grid>
+            </Grid> 
+        </Container>
+        </>
     )
 }
