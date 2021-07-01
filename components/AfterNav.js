@@ -55,12 +55,12 @@ const useStyles =  makeStyles((theme) => ({
         backgroundColor: "hsl(0, 0%, 6%)"
     },
     cardroot: {
-        maxWidth: 405,
+        maxWidth: 305,
         textAlign: "center",
         padding: 0
     },
     cardmedia: {
-        height: 300
+        height: 200
     },
     cardaction: {
         backgroundColor: "hsl(0, 0%, 6%)",
