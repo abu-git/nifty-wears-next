@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core"
 import Meta from "./Meta"
 import LogoPlacement from "./LogoPlacement"
 import AfterNav from "./AfterNav"
+import Footer from "./Footer"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,7 +22,8 @@ export default function HomePage() {
             <Meta />
             <LogoPlacement />
             <AfterNav />
-            <CssBaseline />
+            <Footer />
+            {/*<CssBaseline />*/}
         </div>
     )
         
