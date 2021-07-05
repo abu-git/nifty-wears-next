@@ -72,7 +72,10 @@ const useStyles =  makeStyles((theme) => ({
     cardroot: {
         maxWidth: 305,
         textAlign: "center",
-        padding: 0
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            width: 400
+        }
     },
     cardmedia: {
         height: 200
@@ -85,6 +88,11 @@ const useStyles =  makeStyles((theme) => ({
         margin: "0 auto",
         padding: "2rem 4rem",
         [theme.breakpoints.down('sm')]: {
+            padding: "1rem 2rem",
+            display: "flex",
+            justifyContent: "center"
+        },
+        [theme.breakpoints.down('xs')]: {
             padding: "1rem 2rem"
         }
     },
@@ -100,7 +108,7 @@ export default function AfterNav() {
         <>
         <Container maxWidth="lg" className={classes.showcaseMarginTop}>
         <Grid container>
-            <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Grid item lg={12} sm={12} md={6} xs={12}>
                 <div className={classes.showcase}>
                     <div className={classes.showcaseIntro}>
                         <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>

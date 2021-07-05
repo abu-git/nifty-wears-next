@@ -46,7 +46,7 @@ export default function LogoPlacement () {
                     <IconButton>
                         <Image alt="Nifty Wears logo" layout="fill" src="/assets/favicon_io/favicon-32x32.png" />
                     </IconButton>
-                    <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}>Nifty Wears</h1></Typography>
+                    <Typography className={classes.flexGroww}><h1 className={classes.logoTitle}> Nifty Wears</h1></Typography>
                     <Button className={classes.buttonFx} color="inherit">Home</Button>
                     <Button className={classes.buttonFx} color="inherit">About</Button>
                     <Button className={classes.buttonFx} color="inherit">Shop</Button>

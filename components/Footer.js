@@ -9,10 +9,14 @@ const useStyles = makeStyles((theme) => ({
     footerColor: {
         paddingTop: "20px",
         paddingBottom: "40px",
-        backgroundColor: "hsl(0, 0%, 3.5%)"
+        backgroundColor: "hsl(0, 0%, 3.5%)",
+        
     },
     footerMain: {
-        textAlign: "center"
+        textAlign: "center",
+        [theme.breakpoints.down('sm')]: {
+            textAlign: "center",
+        }
     },
     facebook: {
         color: "hsl(240, 100%, 58%)",
