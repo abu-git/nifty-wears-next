@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     footerColor: {
         paddingTop: "20px",
         paddingBottom: "40px",
-        backgroundColor: "hsl(0, 100%, 2%)"
+        backgroundColor: "hsl(0, 0%, 3.5%)"
     },
     footerMain: {
         textAlign: "center"
