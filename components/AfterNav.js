@@ -25,6 +25,9 @@ const useStyles =  makeStyles((theme) => ({
         /*alignItems: "center",
         marginTop: "50px",
         /*border: "1px solid red"*/
+        [theme.breakpoints.down('sm')]: {
+            minheight: "40vh"
+        }
     },
     showcaseIntro: {
         /*font: `"Yellowtail", cursive`,*/
@@ -44,10 +47,22 @@ const useStyles =  makeStyles((theme) => ({
             background: "#355f08",
             /*opacity: 1,*/
             mixBlendMode: "multiply"
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: "100%"
+        },
+        [theme.breakpoints.down('md')]: {
+            width: "80%"
         }
     },
     showcaseMarginTop: {
-        marginTop: "80px"
+        marginTop: "80px",
+        [theme.breakpoints.down('sm')]: {
+            marginTop: "2px"
+        },
+        [theme.breakpoints.down('md')]: {
+            marginTop: "10px"
+        }
     },
     paper: {
         padding: "4px 4px",
@@ -68,7 +83,10 @@ const useStyles =  makeStyles((theme) => ({
     },
     griditem: {
         margin: "0 auto",
-        padding: "2rem 4rem"
+        padding: "2rem 4rem",
+        [theme.breakpoints.down('sm')]: {
+            padding: "1rem 2rem"
+        }
     },
     buttonmargin: {
         margin: "0 auto"
