@@ -52,7 +52,7 @@ const useStyles =  makeStyles((theme) => ({
             width: "100%"
         },
         [theme.breakpoints.down('md')]: {
-            width: "80%"
+            width: "9       0%"
         }
     },
     showcaseMarginTop: {
@@ -108,7 +108,7 @@ export default function AfterNav() {
         <>
         <Container maxWidth="lg" className={classes.showcaseMarginTop}>
         <Grid container>
-            <Grid item lg={12} sm={12} md={6} xs={12}>
+            <Grid item lg={12} sm={12} md={12} xs={12}>
                 <div className={classes.showcase}>
                     <div className={classes.showcaseIntro}>
                         <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>

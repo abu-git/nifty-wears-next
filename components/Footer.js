@@ -16,9 +16,18 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         [theme.breakpoints.down('sm')]: {
             textAlign: "center",
+        },
+        [theme.breakpoints.down('md')]: {
+            textAlign: "center",
         }
     },
     facebook: {
+        [theme.breakpoints.down('lg')]:{
+            color: "hsl(240, 100%, 58%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem"
+        }, 
         color: "hsl(240, 100%, 58%)",
         paddingRight: "5px",
         paddingLeft: "5px",
