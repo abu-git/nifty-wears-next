@@ -42,7 +42,7 @@ export default function Footer() {
                 <Box className={classes.footerMain} lg={6} md={6} sm={12} xs={12}>
                     <h3>Nifty Wears &copy; 2021</h3>        
                 </Box>
-                <Box className={classes.footerSocials} lg={6} md={6} sm={12} xs={12}>
+                <Box lg={6} md={6} sm={12} xs={12}>
                     <Box className={classes.footerMain}> 
                         <FacebookIcon className={classes.facebook} />
                         <InstagramIcon className={classes.instagram}/>
