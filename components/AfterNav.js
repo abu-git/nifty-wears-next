@@ -82,7 +82,10 @@ const useStyles =  makeStyles((theme) => ({
     },
     cardaction: {
         backgroundColor: "hsl(0, 0%, 6%)",
-        color: "white"
+        color: "white",
+        '&:hover' : {
+            backgroundColor: "hsl(0, 0%, 10%)",
+        },
     },
     griditem: {
         margin: "0 auto",
@@ -98,6 +101,11 @@ const useStyles =  makeStyles((theme) => ({
     },
     buttonmargin: {
         margin: "0 auto"
+    },
+    buttonhover: {
+        '&:hover':{
+            transform: "scale(1.1)",
+        }
     }
 }))
 
@@ -139,7 +147,7 @@ export default function AfterNav() {
                             <CardActions className={classes.cardaction}>
                                 <Box className={classes.buttonmargin}>
                                     <h3 color="inherit"> $95.99</h3>
-                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                    <Button className={classes.buttonhover} variant="outlined" color="inherit">Add to Cart</Button>
                                 </Box>
                             </CardActions>
                         </Card>
@@ -161,7 +169,7 @@ export default function AfterNav() {
                             <CardActions className={classes.cardaction}>
                                 <Box className={classes.buttonmargin}>
                                     <h3 color="inherit"> $90.99</h3>
-                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                    <Button className={classes.buttonhover} variant="outlined" color="inherit">Add to Cart</Button>
                                 </Box>
                             </CardActions>
                         </Card>
@@ -183,7 +191,7 @@ export default function AfterNav() {
                             <CardActions className={classes.cardaction}>
                                 <Box className={classes.buttonmargin}>
                                     <h3 color="inherit"> $70.99</h3>
-                                    <Button variant="outlined" color="inherit">Add to Cart</Button>
+                                    <Button className={classes.buttonhover} variant="outlined" color="inherit">Add to Cart</Button>
                                 </Box>
                             </CardActions>
                         </Card>
@@ -205,7 +213,7 @@ export default function AfterNav() {
                             <CardActions className={classes.cardaction}>
                                 <Box className={classes.buttonmargin}>
                                     <h3 color="inherit"> $70.99</h3>
-                                    <Button variant="outlined" color="inherit">Add to Cart</Button> 
+                                    <Button className={classes.buttonhover} variant="outlined" color="inherit">Add to Cart</Button> 
                                 </Box>
                             </CardActions>
                         </Card>

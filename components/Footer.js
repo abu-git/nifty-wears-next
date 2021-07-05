@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('md')]: {
             textAlign: "center",
+        },
+        [theme.breakpoints.down('lg')]: {
+            textAlign: "center",
         }
     },
     facebook: {
@@ -26,8 +29,20 @@ const useStyles = makeStyles((theme) => ({
             color: "hsl(240, 100%, 58%)",
             paddingRight: "5px",
             paddingLeft: "5px",
-            fontSize: "3.5rem"
-        }, 
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        },
+        [theme.breakpoints.down('md')]:{
+            color: "hsl(240, 100%, 58%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        },  
         color: "hsl(240, 100%, 58%)",
         paddingRight: "5px",
         paddingLeft: "5px",
@@ -37,13 +52,19 @@ const useStyles = makeStyles((theme) => ({
         color: "hsl(67, 73%, 60%)",
         paddingRight: "5px",
         paddingLeft: "5px",
-        fontSize: "3.5rem"
+        fontSize: "3.5rem",
+        '&:hover': {
+            transform: "scale(1.1)",
+        },
     },
     twitter: {
         color: "hsl(225, 73%, 56%)",
         paddingRight: "5px",
         paddingLeft: "5px",
-        fontSize: "3.5rem"
+        fontSize: "3.5rem",
+        '&:hover': {
+            transform: "scale(1.1)",
+        },
     }
 }))
 
