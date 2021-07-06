@@ -49,10 +49,12 @@ const useStyles =  makeStyles((theme) => ({
             mixBlendMode: "multiply"
         },
         [theme.breakpoints.down('sm')]: {
+            paddingTop: "min(19vh, 12rem)",
             width: "100%"
         },
         [theme.breakpoints.down('md')]: {
-            width: "9       0%"
+            paddingTop: "min(19vh, 12rem)",
+            width: "90%"
         }
     },
     showcaseMarginTop: {

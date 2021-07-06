@@ -141,7 +141,7 @@
         height: 5px;
         background: #ffca68;
         position: absolute;
-        top: -.75em; /* or bottom */
+        bottom: -.75em; /* or bottom */
         left: 0;
         right: 0;   
         transform: scale(0, 1);
