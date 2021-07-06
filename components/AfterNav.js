@@ -12,7 +12,13 @@ const useStyles =  makeStyles((theme) => ({
         color: "black",
         padding: "0.25em 0.5em",
         borderRadius: "0.125em",
-        marginBottom: "0.5em"
+        marginBottom: "0.5em",
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "1.3em"
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: "1.3em"
+        }
     },
     showcase: {
         minHeight: "40vh",
@@ -26,7 +32,7 @@ const useStyles =  makeStyles((theme) => ({
         marginTop: "50px",
         /*border: "1px solid red"*/
         [theme.breakpoints.down('sm')]: {
-            minheight: "40vh"
+            minheight: "30vh"
         }
     },
     showcaseIntro: {
@@ -108,6 +114,11 @@ const useStyles =  makeStyles((theme) => ({
         '&:hover':{
             transform: "scale(1.1)",
         }
+    },
+    showcase_p: {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "1.5em"
+        }
     }
 }))
 
@@ -123,7 +134,7 @@ export default function AfterNav() {
                     <div className={classes.showcaseIntro}>
                         <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>
                         <h1>Nifty Wears</h1>
-                        <p>Your one stop shop for specially crafted clothing.</p>
+                        <p className={classes.showcase_p}>Your one stop shop for specially crafted clothing.</p>
                     </div>
                 </div>
                 {/*<Box className={classes.showcaseIntro}>30% off on your first buy<h1>Nifty Wears</h1></Box>*/}
