@@ -3,7 +3,7 @@
 .header{
     background: hsl(0, 0%, 3.5%);
     text-align: center;
-    /*position: fixed;*/
+    position: fixed;
     z-index: 999; /* ensures header is always top of page */
     width: 100%;
 }
