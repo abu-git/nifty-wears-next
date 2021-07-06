@@ -5,6 +5,7 @@ import Meta from "./Meta"
 import LogoPlacement from "./LogoPlacement"
 import AfterNav from "./AfterNav"
 import Footer from "./Footer"
+import Navbar from "./Navbar"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,7 +21,8 @@ export default function HomePage() {
     return(
         <div className={classes.root}>
             <Meta />
-            <LogoPlacement />
+            {/*<LogoPlacement />*/}
+            <Navbar />
             <AfterNav />
             <Footer />
             {/*<CssBaseline />*/}
