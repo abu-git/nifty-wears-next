@@ -42,14 +42,53 @@ const useStyles = makeStyles((theme) => ({
             '&:hover': {
                 transform: "scale(1.1)",
             }
-        },  
+        },
+        [theme.breakpoints.down('sm')]:{
+            color: "hsl(240, 100%, 58%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        },   
         color: "hsl(240, 100%, 58%)",
         paddingRight: "5px",
         paddingLeft: "5px",
-        fontSize: "3.5rem"
+        fontSize: "3.5rem",
+        '&:hover': {
+            transform: "scale(1.1)",
+        }
     },
     instagram: {
-        color: "hsl(67, 73%, 60%)",
+        [theme.breakpoints.down('lg')]:{
+            color: "hsl(43, 100%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        },
+        [theme.breakpoints.down('md')]:{
+            color: "hsl(43, 100%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        }, 
+        [theme.breakpoints.down('sm')]:{
+            color: "hsl(43, 100%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        }, 
+        color: "hsl(43, 100%, 56%)",
         paddingRight: "5px",
         paddingLeft: "5px",
         fontSize: "3.5rem",
@@ -58,6 +97,33 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     twitter: {
+        [theme.breakpoints.down('lg')]:{
+            color: "hsl(225, 73%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        },
+        [theme.breakpoints.down('md')]:{
+            color: "hsl(225, 73%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        }, 
+        [theme.breakpoints.down('sm')]:{
+            color: "hsl(225, 73%, 56%)",
+            paddingRight: "5px",
+            paddingLeft: "5px",
+            fontSize: "3.5rem",
+            '&:hover': {
+                transform: "scale(1.1)",
+            }
+        }, 
         color: "hsl(225, 73%, 56%)",
         paddingRight: "5px",
         paddingLeft: "5px",

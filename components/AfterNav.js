@@ -12,7 +12,7 @@ const useStyles =  makeStyles((theme) => ({
         color: "black",
         padding: "0.25em 0.5em",
         borderRadius: "0.125em",
-        marginBottom: "0.05em"
+        marginBottom: "0.5em"
     },
     showcase: {
         minHeight: "40vh",

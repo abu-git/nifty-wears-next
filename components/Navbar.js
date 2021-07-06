@@ -23,10 +23,11 @@ export default function Navbar() {
                 </IconButton>
                 <h3>Nifty Wears</h3>    
             </div>*/}
-            <IconButton>
+            <IconButton className={headerStyles.logo}>
                 <Image width="30px" height="30px" alt="Nifty Wears logo"  src="/assets/favicon_io/favicon-32x32.png" />
+                <h3 className={headerStyles.logotitle}>Nifty Wears</h3>
             </IconButton>
-            <h3 className={headerStyles.logo}>Nifty Wears</h3>
+            
             <input type="checkbox" id="nav-toggle" className={headerStyles.navtoggle}/>
             <nav className={headerStyles.nav}>
                 <ul>
