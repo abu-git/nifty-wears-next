@@ -113,6 +113,8 @@ const useStyles =  makeStyles((theme) => ({
     buttonhover: {
         '&:hover':{
             transform: "scale(1.1)",
+            backgroundColor: "#ffca68",
+            color: "black"
         }
     },
     showcase_p: {
@@ -127,7 +129,7 @@ export default function AfterNav() {
 
     return(
         <>
-        <Container maxWidth="lg" className={classes.showcaseMarginTop}>
+        <Container maxWidth="xl" className={classes.showcaseMarginTop}>
         <Grid container>
             <Grid item lg={12} sm={12} md={12} xs={12}>
                 <div className={classes.showcase}>
@@ -142,7 +144,7 @@ export default function AfterNav() {
         </Grid>
         </Container>
 
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
             <Grid container className={classes.griditem}>
                 <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
                     {/*<Paper className={classes.paper}>*/}
