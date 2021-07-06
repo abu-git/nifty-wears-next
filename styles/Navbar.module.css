@@ -1,9 +1,12 @@
+
 /* Navigation styles start here */
 
 .header{
     background: hsl(0, 0%, 3.5%);
+    /*background: transparent;*/
     text-align: center;
     position: fixed;
+    top: 0px;
     z-index: 999; /* ensures header is always top of page */
     width: 100%;
 }
@@ -54,7 +57,7 @@
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--background);
+    background: hsl(0, 0%, 3.5%);
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
@@ -82,7 +85,7 @@
 }
 
 .nav a:hover {
-    color: black;
+    color: #ffca68;
 }
 
 .navtoggle:checked ~ nav {
@@ -100,6 +103,8 @@
     }
 
     .header {
+        position: fixed;
+        z-index: 999;
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
     }
@@ -134,7 +139,7 @@
         content: '';
         display: block;
         height: 5px;
-        background: black;
+        background: #ffca68;
         position: absolute;
         top: -.75em; /* or bottom */
         left: 0;
