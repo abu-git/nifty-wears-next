@@ -1,9 +1,23 @@
 import headerStyles from '../styles/Navbar.module.css'
+import { makeStyles, IconButton } from "@material-ui/core"
+import Image from 'next/image'
+
+const useStyles = makeStyles((theme) => ({
+    logoimage: {
+        width: "1.5rem",
+        height: "1.5rem"
+    }
+}))
 
 export default function Navbar() {
+    const classes = useStyles()
     return(
         <header className={headerStyles.header}>
-            <h1 className={headerStyles.logo}>Logo</h1>
+            <IconButton className={classes.logoimage}>
+                <Image alt="Nifty Wears logo" layout="fill" src="/assets/favicon_io/favicon-32x32.png" />
+            </IconButton>
+            {/*<Image alt="Nifty Wears logo" className={classes.logoimage} layout="fill" src="/assets/favicon_io/favicon-32x32.png" />*/}
+            <h3 className={headerStyles.logo}>Nifty Wears</h3>
             <input type="checkbox" id="nav-toggle" className={headerStyles.navtoggle}/>
             <nav className={headerStyles.nav}>
                 <ul>
