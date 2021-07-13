@@ -1,11 +1,17 @@
 import headerStyles from '../styles/Navbar.module.css'
-import { IconButton } from "@material-ui/core"
+import { IconButton, Badge, makeStyles   } from "@material-ui/core"
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 
-
+const useStyles =  makeStyles((theme) => ({
+    cart: {
+        color: "#85817a"
+    }
+}))
 
 export default function Navbar() {
-   
+    const classes = useStyles()
+
     return(
         <header className={headerStyles.header}>
             <IconButton className={headerStyles.logo}>
@@ -20,6 +26,13 @@ export default function Navbar() {
                     <li><a href="#">About</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li>
+                        <IconButton>
+                            <Badge badgeContent={2} className={classes.cart}>
+                                <ShoppingCartIcon />
+                            </Badge>
+                        </IconButton>
+                    </li>
                 </ul>
             </nav>
             <label htmlFor="nav-toggle" className={headerStyles.navtogglelabel}>
