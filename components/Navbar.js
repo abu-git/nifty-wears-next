@@ -5,7 +5,10 @@ import Image from 'next/image'
 
 const useStyles =  makeStyles((theme) => ({
     cart: {
-        color: "#85817a"
+        color: "white"
+    },
+    cartcounter : {
+        color: "red"
     }
 }))
 
@@ -27,11 +30,12 @@ export default function Navbar() {
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Contact</a></li>
                     <li>
-                        <IconButton>
-                            <Badge badgeContent={2} className={classes.cart}>
-                                <ShoppingCartIcon />
+                        {/*<IconButton>*/}
+                            Cart
+                            <Badge badgeContent={2} className={classes.cartcounter}>
+                                <ShoppingCartIcon className={classes.cart} width="30px" height="30px" />
                             </Badge>
-                        </IconButton>
+                        {/*</IconButton>*/}
                     </li>
                 </ul>
             </nav>
