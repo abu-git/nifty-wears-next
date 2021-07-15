@@ -11,24 +11,27 @@ const useStyles =  makeStyles((theme) => ({
         backgroundColor: "#ffca68",
         color: "white"
     },
-    margin: {
+   /*margin: {
         margin: theme.spacing(2)
       },
     customBadge: {
         backgroundColor: props => props.color,
         color: "white"
-    }
+    }*/
 }))
+
+const styles = theme => ({
+    customBadge: {
+      backgroundColor: props => props.color,
+      color: "white"
+    }
+})
 
 
 function SimpleBadge(props) {
-    const  classes = useStyles()
+    const  classes = styles()
     return(
-        <Badge 
-            classes={{ badge: classes.customBadge }}
-            className={classes.margin}
-            badgeContent={10}
-        >
+        <Badge classes={{ badge: classes.customBadge }} badgeContent={2}>
             <ShoppingCartIcon />
         </Badge>
     )
@@ -36,8 +39,9 @@ function SimpleBadge(props) {
 
 const StyledBadge = withStyles(useStyles)(SimpleBadge)
 
-export default function Navbar() {
-    const classes = useStyles()
+export default function Navbar(props) {
+    //const classes = useStyles()
+    const { classes } = styles()
 
     return(
         <header className={headerStyles.header}>
@@ -54,13 +58,13 @@ export default function Navbar() {
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Contact</a></li>
                     <li>
-                        <a href="#">
-                            Cart{""}<StyledBadge color="#FFCA68" /> 
-                            {/*<Badge badgeContent={2} className={classes.cartcounter}>
+                        {/*<a href="#">*/}
+                            Cart{" "}<StyledBadge color="GREEN" />
+                            {/*<Badge badgeContent={2} className={classes.cart}>
                                 <ShoppingCartIcon width="30px" height="30px" />
-                            </Badge>
-                            */}
-                        </a>
+                            </Badge>*/}
+                            
+                        {/*</a>*/}
                     </li>
                 </ul>
             </nav>
