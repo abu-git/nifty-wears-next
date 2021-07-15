@@ -1,5 +1,5 @@
 import headerStyles from '../styles/Navbar.module.css'
-import { IconButton, Badge, makeStyles   } from "@material-ui/core"
+import { IconButton, Badge, makeStyles, withStyles   } from "@material-ui/core"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 
@@ -8,9 +8,33 @@ const useStyles =  makeStyles((theme) => ({
         color: "white"
     },
     cartcounter : {
-        color: "#ffca68"
+        backgroundColor: "#ffca68",
+        color: "white"
+    },
+    margin: {
+        margin: theme.spacing(2)
+      },
+    customBadge: {
+        backgroundColor: props => props.color,
+        color: "white"
     }
 }))
+
+
+function SimpleBadge(props) {
+    const  classes = useStyles()
+    return(
+        <Badge 
+            classes={{ badge: classes.customBadge }}
+            className={classes.margin}
+            badgeContent={10}
+        >
+            <ShoppingCartIcon />
+        </Badge>
+    )
+}
+
+const StyledBadge = withStyles(useStyles)(SimpleBadge)
 
 export default function Navbar() {
     const classes = useStyles()
@@ -31,10 +55,11 @@ export default function Navbar() {
                     <li><a href="#">Contact</a></li>
                     <li>
                         <a href="#">
-                            Cart{" "} 
-                            <Badge badgeContent={2} className={classes.cartcounter}>
-                                <ShoppingCartIcon className={classes.cart} width="30px" height="30px" />
+                            Cart{""}<StyledBadge color="#FFCA68" /> 
+                            {/*<Badge badgeContent={2} className={classes.cartcounter}>
+                                <ShoppingCartIcon width="30px" height="30px" />
                             </Badge>
+                            */}
                         </a>
                     </li>
                 </ul>
