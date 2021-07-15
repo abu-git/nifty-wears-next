@@ -31,7 +31,7 @@ export default function Navbar() {
                     <li><a href="#">Contact</a></li>
                     <li>
                         <a href="#">
-                            Cart
+                            Cart{" "} 
                             <Badge badgeContent={2} className={classes.cartcounter}>
                                 <ShoppingCartIcon className={classes.cart} width="30px" height="30px" />
                             </Badge>
