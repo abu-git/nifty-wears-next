@@ -22,8 +22,8 @@ import Image from 'next/image'
 
 const styles = theme => ({
     customBadge: {
-      backgroundColor: "red",
-      color: "white"
+      backgroundColor: "#ffca68",
+      color: "black"
     }
 })
 
@@ -57,7 +57,7 @@ export default function Navbar(props) {
                     <li><a href="#">Contact</a></li>
                     <li>
                         {/*<a href="#">*/}
-                            Cart{" "}<StyledBadge color="yellow" />
+                            Cart{" "}<StyledBadge />
                         {/*</a>*/}
                     </li>
                 </ul>
