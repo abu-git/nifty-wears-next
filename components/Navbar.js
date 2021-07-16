@@ -3,7 +3,7 @@ import { IconButton, Badge, makeStyles, withStyles   } from "@material-ui/core"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 
-const useStyles =  makeStyles((theme) => ({
+/*const useStyles =  makeStyles((theme) => ({
     cart: {
         color: "white"
     },
@@ -11,37 +11,35 @@ const useStyles =  makeStyles((theme) => ({
         backgroundColor: "#ffca68",
         color: "white"
     },
-   /*margin: {
+   margin: {
         margin: theme.spacing(2)
       },
     customBadge: {
         backgroundColor: props => props.color,
         color: "white"
-    }*/
-}))
+    }
+}))*/
 
 const styles = theme => ({
     customBadge: {
-      backgroundColor: props => props.color,
+      backgroundColor: "red",
       color: "white"
     }
 })
 
 
 function SimpleBadge(props) {
-    const  classes = styles()
+    const { classes } = props
     return(
-        <Badge classes={{ badge: classes.customBadge }} badgeContent={2}>
+        <Badge classes={{ badge: classes.customBadge }} badgeContent={2} overlap="circle">
             <ShoppingCartIcon />
         </Badge>
     )
 }
 
-const StyledBadge = withStyles(useStyles)(SimpleBadge)
+const StyledBadge = withStyles(styles)(SimpleBadge)
 
 export default function Navbar(props) {
-    //const classes = useStyles()
-    const { classes } = styles()
 
     return(
         <header className={headerStyles.header}>
@@ -59,11 +57,7 @@ export default function Navbar(props) {
                     <li><a href="#">Contact</a></li>
                     <li>
                         {/*<a href="#">*/}
-                            Cart{" "}<StyledBadge color="GREEN" />
-                            {/*<Badge badgeContent={2} className={classes.cart}>
-                                <ShoppingCartIcon width="30px" height="30px" />
-                            </Badge>*/}
-                            
+                            Cart{" "}<StyledBadge color="yellow" />
                         {/*</a>*/}
                     </li>
                 </ul>
