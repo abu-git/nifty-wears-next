@@ -28,6 +28,7 @@ const StyledBadge = withStyles(styles)(SimpleBadge)
 export default function Navbar(props) {
 
     return(
+        <>
         <header className={headerStyles.header}>
             <IconButton className={headerStyles.logo}>
                 <Image width="30px" height="30px" alt="Nifty Wears logo"  src="/assets/favicon_io/favicon-32x32.png" />
@@ -52,5 +53,6 @@ export default function Navbar(props) {
                 <span></span>
             </label>
         </header>
+        </>
     )
 }
