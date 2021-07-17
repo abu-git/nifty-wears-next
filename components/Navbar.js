@@ -2,6 +2,8 @@ import headerStyles from '../styles/Navbar.module.css'
 import { IconButton, Badge, withStyles } from "@material-ui/core"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
 const styles = theme => ({
     customBadge: {
@@ -13,8 +15,9 @@ const styles = theme => ({
 
 function SimpleBadge(props) {
     const { classes } = props
+    const { quantity } = useContext(CartContext)
     return(
-        <Badge classes={{ badge: classes.customBadge }} badgeContent={2} overlap="rectangle">
+        <Badge classes={{ badge: classes.customBadge }} badgeContent={quantity} overlap="rectangle">
             <ShoppingCartIcon />
         </Badge>
     )

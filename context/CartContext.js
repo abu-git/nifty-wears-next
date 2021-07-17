@@ -3,7 +3,29 @@ import { createContext, useEffect, useState } from 'react'
 export const CartContext = createContext()
 
 const CartContextProvider = (props) => {
-    const [products] = useState([])
+    const [products] = useState([
+        {
+            id: 1,
+            title: "Brown Coat",
+            price: 95.99,
+            photo: "/man1.jpg",
+            quantity: 1
+        },
+        {
+            id: 2,
+            title: "Red Coat",
+            price: 90.99,
+            photo: "/man2.jpg",
+            quantity: 1
+        },
+        {
+            id: 3,
+            title: "White Shirt",
+            price: 70.99,
+            photo: "/man3.jpg",
+            quantity: 1
+        }
+    ])
 
     //cart state
     const [cart, setCart] = useState([], ()=>{
