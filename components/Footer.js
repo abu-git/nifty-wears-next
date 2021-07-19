@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "40px",
         backgroundColor: "hsl(0, 0%, 3.5%)",
     },
+    h3_code: {
+        color: "white"
+    },
     footerMain: {
         textAlign: "center",
         [theme.breakpoints.down('lg')]: {
@@ -140,7 +143,7 @@ export default function Footer() {
             <Container maxWidth="xl" className={classes.footerColor}>
                 <Grid container>
                     <Grid item className={classes.footerMain} lg={6} md={6} sm={12} xs={12}>
-                        <h3>Nifty Wears &copy; 2021</h3> 
+                        <h3 className={classes.h3_code}>Nifty Wears &copy; 2021</h3> 
                     </Grid>
                     <Grid item lg={6} md={6} sm={12} xs={12}>
                         <Box className={classes.footerMain}> 
