@@ -1,6 +1,9 @@
 {
   "name": "nifty-wears-next",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.4.0"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
