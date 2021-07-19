@@ -39,7 +39,7 @@ export default function Navbar(props) {
             <nav className={headerStyles.nav}>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Contact</a></li>
                     <li>
