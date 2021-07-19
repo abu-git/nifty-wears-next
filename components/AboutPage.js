@@ -14,10 +14,22 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             display: "flex",
             flexDirection: "column"
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            minHeight: "6   0vh",
+            display: "flex",
+            flexDirection: "column"
+        },
+        [theme.breakpoints.down('sm')]: {
+            display: "flex",
+            flexDirection: "column"
+        },
     },
     p_code: {
-        color: "white"
+        color: "white",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: "1.2em"
+        }
     },
     left: {
         display: "flex",
@@ -35,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
             //justifyContent: "center",
             //alignItems: "center"
         },
+        [theme.breakpoints.down('xs')]: {
+            maxHeight: "20vh",
+            marginTop: "30px"
+        },
         [theme.breakpoints.down('lg')]: {
             maxHeight: "90vh"
         }
@@ -46,6 +62,10 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: "90vh",
         [theme.breakpoints.down('sm')]:{
             marginTop: "0px"
+        },
+        [theme.breakpoints.down('xs')]: {
+            maxHeight: "20vh",
+            marginTop: "30px"
         },
         [theme.breakpoints.down('md')]: {
             //maxHeight: "30vh",
@@ -62,23 +82,23 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         width: "1.5em",
         height: "1.3em",
-        /*"&:hover": {
-            color: "#ffca68"
-        }*/
+        "&:hover": {
+            cursor: "pointer"
+        }
     },
     backtext: {
         color: "white",
         paddingBottom: "3px",
         "&:hover": {
             //color: "#ffca68",
-            textDecoration: "underline",
+            //textDecoration: "underline",
             cursor: "pointer"
         }
     },
     goback: {
         marginTop: "15px",
         '&:hover': {
-            textDecoration: "underline"
+            cursor: "pointer"
         }
     }
 }))
@@ -88,7 +108,7 @@ export default function AboutPage(){
     return(
         <>
             <Container maxWidth="xl">
-                <Link href="/">
+                <Link href="/" passHref>
                     <div className={classes.goback}>
                         <ArrowBack className={classes.arrowback} />
                         <span className={classes.backtext}> Back to home</span>
