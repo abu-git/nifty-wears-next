@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import headerStyles from '../styles/Navbar.module.css'
 import { IconButton, Badge, withStyles } from "@material-ui/core"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
@@ -38,10 +39,10 @@ export default function Navbar(props) {
             <input type="checkbox" id="nav-toggle" className={headerStyles.navtoggle}/>
             <nav className={headerStyles.nav}>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link href="/"><a>Home</a></Link></li>
+                    <li><Link href="/about"><a>About</a></Link></li>
+                    <li><Link href="#"><a>Shop</a></Link></li>
+                    <li><Link href="#"><a>Contact</a></Link></li>
                     <li>
                         {/*<a href="#">*/}
                             Cart{" "}<StyledBadge />
