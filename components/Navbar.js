@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import headerStyles from '../styles/Navbar.module.css'
-import { IconButton, Badge, withStyles } from "@material-ui/core"
+import { IconButton, Badge, withStyles, makeStyles, Box } from "@material-ui/core"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 import { useContext } from 'react'
@@ -9,9 +9,54 @@ import { CartContext } from '../context/CartContext'
 const styles = theme => ({
     customBadge: {
       backgroundColor: "#ffca68",
-      color: "black"
-    }
+      color: "black",
+    },
+    
 })
+
+const useStyles = makeStyles((theme) => ({
+    cart: {
+
+    },
+    badgeMobile: {
+        [theme.breakpoints.down('xl')]:{
+            //margin:"48px 3px",
+            display: "none !important"
+        },
+        [theme.breakpoints.down('lg')]:{
+            //margin:"48px 3px",
+            display: "none !important"
+        },
+        [theme.breakpoints.down('md')]:{
+            display: "block !important"
+        },
+        [theme.breakpoints.down('sm')]:{
+            display: "block"
+        },
+        [theme.breakpoints.down('xs')]:{
+            display: "block"
+        }
+    },
+    styledbadgeDesktop: {
+        //border: "1px solid white",
+        marginTop: "0",
+        [theme.breakpoints.down('xl')]:{
+            display: "block"
+        },
+        [theme.breakpoints.down('lg')]:{
+            display: "block"
+        },
+        [theme.breakpoints.down('md')]:{
+            display: "none !important"
+        },
+        [theme.breakpoints.down('sm')]:{
+            display: "none !important"
+        },
+        [theme.breakpoints.down('xs')]:{
+            display: "none !important"
+        }
+    }
+}))
 
 
 function SimpleBadge(props) {
@@ -27,6 +72,7 @@ function SimpleBadge(props) {
 const StyledBadge = withStyles(styles)(SimpleBadge)
 
 export default function Navbar(props) {
+    const classes = useStyles()
 
     return(
         <>
@@ -44,7 +90,7 @@ export default function Navbar(props) {
                     <li><Link href="#"><a>Shop</a></Link></li>
                     <li><Link href="#"><a>Contact</a></Link></li>
                     <li>
-                        {/*<a href="#">*/}
+                        {/*<a href="#">}*/}
                             Cart{" "}<StyledBadge />
                         {/*</a>*/}
                     </li>
@@ -53,6 +99,8 @@ export default function Navbar(props) {
             <label htmlFor="nav-toggle" className={headerStyles.navtogglelabel}>
                 <span></span>
             </label>
+            {/*<StyledBadge className={classes.badgeMobile} />
+            <Box className={classes.styledbadgeDesktop}><StyledBadge /></Box>*/}
         </header>
         </>
     )

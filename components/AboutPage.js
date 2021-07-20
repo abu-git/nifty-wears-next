@@ -43,13 +43,13 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             maxHeight: "20vh",
-            marginTop: "30px"
+            marginTop: "50px"
             //justifyContent: "center",
             //alignItems: "center"
         },
         [theme.breakpoints.down('xs')]: {
             maxHeight: "20vh",
-            marginTop: "30px"
+            marginTop: "50px"
         },
         [theme.breakpoints.down('lg')]: {
             maxHeight: "90vh"

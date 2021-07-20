@@ -17,6 +17,16 @@
     height: 96px; /* added to adjust nav height */
 }
 
+.styledbadgeDesktop {
+    display: block;
+    margin: 48px 4px;
+}
+
+.badgeMobile {
+    /*margin: 48px 4px;*/
+    display: none;
+}
+
 .navtoggle {
     display: none;
 }
@@ -103,7 +113,18 @@
     transition: opacity 150ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (max-width: 968px) {
+    .badgeMobile {
+        display: block;
+    }
+
+    .styledbadgeDesktop {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 968px) {
     .navtogglelabel {
         display: none;
     }
@@ -114,6 +135,14 @@
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
     }
+
+    /*.badgeMobile {
+        display: block;
+    }
+
+    .styledbadgeDesktop {
+        display: none;
+    }*/
 
     .logo{
         grid-column: 2 / 3;
