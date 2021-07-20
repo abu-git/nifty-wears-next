@@ -91,7 +91,7 @@ export default function Navbar(props) {
                     <li><Link href="#"><a>Contact</a></Link></li>
                     <li>
                         {/*<a href="#">}*/}
-                            Cart{" "}<StyledBadge />
+                            <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
                         {/*</a>*/}
                     </li>
                 </ul>

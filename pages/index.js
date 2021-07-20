@@ -1,10 +1,8 @@
 import HomePage from "../components/HomePage"
-import CartContextProvider from "../context/CartContext"
+{/*import CartContextProvider from "../context/CartContext"*/}
 
 export default function Home() {
   return (
-    <CartContextProvider>
-      <HomePage />
-    </CartContextProvider> 
+      <HomePage/>
   )
 }

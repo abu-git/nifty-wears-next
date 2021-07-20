@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: "column"
         },
         [theme.breakpoints.down('xs')]: {
-            minHeight: "6   0vh",
+            minHeight: "60vh",
             display: "flex",
             flexDirection: "column"
         },

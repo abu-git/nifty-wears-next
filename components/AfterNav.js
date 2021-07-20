@@ -117,18 +117,18 @@ const AfterNav = (props) => {
     return(
         <>
         <Container maxWidth="xl" className={classes.showcaseMarginTop}>
-        <Grid container>
-            <Grid item lg={12} sm={12} md={12} xs={12}>
-                <div className={classes.showcase}>
-                    <div className={classes.showcaseIntro}>
-                        <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>
-                        <h1>Nifty Wears</h1>
-                        <p className={classes.showcase_p}>Your one stop shop for specially crafted clothing.</p>
+            <Grid container>
+                <Grid item lg={12} sm={12} md={12} xs={12}>
+                    <div className={classes.showcase}>
+                        <div className={classes.showcaseIntro}>
+                            <h2 className={classes.code}>20% off first buy {/*Shop with*/}</h2>
+                            <h1>Nifty Wears</h1>
+                            <p className={classes.showcase_p}>Your one stop shop for specially crafted clothing.</p>
+                        </div>
                     </div>
-                </div>
-                {/*<Box className={classes.showcaseIntro}>30% off on your first buy<h1>Nifty Wears</h1></Box>*/}
+                    {/*<Box className={classes.showcaseIntro}>30% off on your first buy<h1>Nifty Wears</h1></Box>*/}
+                </Grid>
             </Grid>
-        </Grid>
         </Container>
 
         <Container maxWidth="xl">
