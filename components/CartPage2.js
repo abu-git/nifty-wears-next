@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { Container, Grid, makeStyles } from "@material-ui/core"
 import CartItem2 from "./CartItem2"
+import { ArrowBack } from '@material-ui/icons'
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"
@@ -8,6 +10,13 @@ import { useContext } from "react"
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: "70vh",
+    },
+    pageTitle: {
+        textAlign: "center",
+        marginTop: "20px",
+        [theme.breakpoints.down('xs')]: {
+            marginTop: "40px"
+        },
     },
     table: {
         border: "1px solid #ccc",
@@ -75,6 +84,30 @@ const useStyles = makeStyles((theme) => ({
                 textTransform: "uppercase"
             }
         },
+    },
+    arrowback: {
+        marginTop: "5px",
+        color: "white",
+        width: "1.5em",
+        height: "1.3em",
+        "&:hover": {
+            cursor: "pointer"
+        }
+    },
+    backtext: {
+        color: "white",
+        paddingBottom: "3px",
+        "&:hover": {
+            //color: "#ffca68",
+            //textDecoration: "underline",
+            cursor: "pointer"
+        }
+    },
+    goback: {
+        marginTop: "15px",
+        '&:hover': {
+            cursor: "pointer"
+        }
     }
 }))
 
@@ -84,8 +117,14 @@ export default function CartPage2() {
     return(
         <>
             <Container maxWidth="xl">
+                <Link href="/" passHref>
+                    <div className={classes.goback}>
+                        <ArrowBack className={classes.arrowback} />
+                        <span className={classes.backtext}> Back to home</span>
+                    </div>
+                </Link>
                 <Grid container className={classes.root}>
-                    <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <Grid className={classes.pageTitle} item xl={12} lg={12} md={12} sm={12} xs={12}>
                         <h1>Cart</h1>
                     </Grid>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
