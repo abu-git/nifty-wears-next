@@ -13,9 +13,9 @@ const useStyles = makeStyles((theme) => ({
             display: "block",
             fontSize: "0.8em",
             textAlign: "right",
-            /*'&:last-child': {
+            '&:last-child': {
                 borderBottom: 0
-            },*/
+            },
             '&::before': {
                 content: "attr(data-label)",
                 float: "left",

@@ -90,17 +90,13 @@ export default function Navbar(props) {
                     <li><Link href="#"><a>Shop</a></Link></li>
                     <li><Link href="#"><a>Contact</a></Link></li>
                     <li>
-                        {/*<a href="#">}*/}
-                            <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
-                        {/*</a>*/}
+                        <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
                     </li>
                 </ul>
             </nav>
             <label htmlFor="nav-toggle" className={headerStyles.navtogglelabel}>
                 <span></span>
             </label>
-            {/*<StyledBadge className={classes.badgeMobile} />
-            <Box className={classes.styledbadgeDesktop}><StyledBadge /></Box>*/}
         </header>
         </>
     )

@@ -50,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     tabletr: {
-        //backgroundColor: "#f8f8f8",
         border: "1px solid #ddd",
         padding: "0.35em",
         [theme.breakpoints.down('xs')]: {
@@ -98,8 +97,6 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         paddingBottom: "3px",
         "&:hover": {
-            //color: "#ffca68",
-            //textDecoration: "underline",
             cursor: "pointer"
         }
     },
