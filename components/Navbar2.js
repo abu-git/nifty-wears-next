@@ -121,14 +121,10 @@ export default function Navbar2(){
     }
     return(
         <div className={classes.topnav} id="myTopnav">
-            <Link href="/"><a>Home</a></Link>
             <Link href="/about"><a>About</a></Link>
             <a onClick={() => scrollFunc()}>
-                {/*<Scroll to="shop" smooth={true}>*/}
-                    Shop
-                {/*</Scroll>*/}    
+                Shop   
             </a>
-            
             <a>Contact</a>
             <div className={classes.rightlink}>
                 <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
