@@ -3,9 +3,16 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 import { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
-import { Link as Scroll } from 'react-scroll'
-import { makeStyles } from "@material-ui/core"
+import { Link as Scroll, animateScroll, scroller } from 'react-scroll'
+import { makeStyles, withStyles, Badge } from "@material-ui/core"
 import MenuIcon from '@material-ui/icons/Menu'
+
+const styles = theme => ({
+    customBadge: {
+      backgroundColor: "#ffca68",
+      color: "black",
+    },
+})
 
 const useStyles = makeStyles((theme) => ({
     topnav: {
@@ -23,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
             textDecoration: "none",
             fontSize: "17px",
             fontWeight: "bold",
+            //border: "1px solid red",
             '&:hover': {
-                backgroundColor: "#ff5959",
+                backgroundColor: "#ffca68",
                 color: "black"
             },
             [theme.breakpoints.down('xs')]: {
@@ -38,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
             }
         }
     },
-    topnava: {
+    shopa: {
         float: "left",
         display: "block",
         color: "#f2f2f2",
@@ -47,15 +55,11 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         fontSize: "17px",
         fontWeight: "bold",
+        border: "1px solid red",
         '&:hover': {
-            backgroundColor: "#ff5959",
+            backgroundColor: "#ffca68",
             color: "black"
         },
-        [theme.breakpoints.down('xs')]: {
-            ':not(:first-child)': {
-                display: "none"
-            }
-        }
     },
     topnavicon: {
         display: "none",
@@ -81,11 +85,30 @@ const useStyles = makeStyles((theme) => ({
     },
     rightlink: {
         float: "right"
-    }
+    },
 }))
+
+function SimpleBadge(props) {
+    const { classes } = props
+    const { quantity } = useContext(CartContext)
+    return(
+        <Badge classes={{ badge: classes.customBadge }} badgeContent={quantity} overlap="rectangle">
+            <ShoppingCartIcon />
+        </Badge>
+    )
+}
+
+const StyledBadge = withStyles(styles)(SimpleBadge)
 
 export default function Navbar2(){
     const classes = useStyles()
+
+    const scrollFunc = () => {
+        var scroll = scroller
+        scroll.scrollTo("shop", {
+            smooth: true
+        })
+    }
 
     const onClickFunc = e => {
         var x = document.getElementById("myTopnav")
@@ -94,15 +117,21 @@ export default function Navbar2(){
         }else{
             x.className = "topnav"
         }
+        console.log(x)
     }
     return(
         <div className={classes.topnav} id="myTopnav">
-            <a>Home</a>
-            <a>About</a>
-            <a>Shop</a>
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/about"><a>About</a></Link>
+            <a onClick={() => scrollFunc()}>
+                {/*<Scroll to="shop" smooth={true}>*/}
+                    Shop
+                {/*</Scroll>*/}    
+            </a>
+            
             <a>Contact</a>
             <div className={classes.rightlink}>
-                <a>Cart{" "}<ShoppingCartIcon /></a>
+                <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
             </div>
             <a id="icon" onClick={() => onClickFunc()}><MenuIcon /></a>
         </div>
