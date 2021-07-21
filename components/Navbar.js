@@ -5,6 +5,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import Image from 'next/image'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Link as Scroll } from 'react-scroll'
 
 const styles = theme => ({
     customBadge: {
@@ -17,6 +18,9 @@ const styles = theme => ({
 const useStyles = makeStyles((theme) => ({
     cart: {
 
+    },
+    shoppointer: {
+        cursor: "pointer"
     },
     badgeMobile: {
         [theme.breakpoints.down('xl')]:{
@@ -87,7 +91,7 @@ export default function Navbar(props) {
                 <ul>
                     <li><Link href="/"><a>Home</a></Link></li>
                     <li><Link href="/about"><a>About</a></Link></li>
-                    <li><Link href="#"><a>Shop</a></Link></li>
+                    <li className={classes.shoppointer}><Scroll to="shop" smooth={true}><a>Shop</a></Scroll></li>
                     <li><Link href="#"><a>Contact</a></Link></li>
                     <li>
                         <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>

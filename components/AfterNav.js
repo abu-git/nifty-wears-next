@@ -107,6 +107,10 @@ const useStyles =  makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: "1.5em"
         }
+    },
+    shoptitle: {
+        textAlign: "center",
+        margin: "43px 0"
     }
 }))
 
@@ -131,11 +135,15 @@ const AfterNav = (props) => {
             </Grid>
         </Container>
 
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" id="shop">
+            
             <Grid container className={classes.griditem}>
-               <MenuItem product={products[0]} key={products[0].id} />
-               <MenuItem product={products[1]} key={products[1].id} />
-               <MenuItem product={products[2]} key={products[2].id} />
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.shoptitle}>
+                    <h2>Check our stock!</h2>
+                </Grid>
+                <MenuItem product={products[0]} key={products[0].id} />
+                <MenuItem product={products[1]} key={products[1].id} />
+                <MenuItem product={products[2]} key={products[2].id} />
             </Grid> 
         </Container>
         </>
