@@ -110,7 +110,10 @@ const useStyles =  makeStyles((theme) => ({
     },
     shoptitle: {
         textAlign: "center",
-        margin: "43px 0"
+        margin: "43px 0",
+        [theme.breakpoints.down('xs')]: {
+            margin: "45px 0"
+        }
     }
 }))
 
@@ -134,9 +137,8 @@ const AfterNav = (props) => {
                 </Grid>
             </Grid>
         </Container>
-
-        <Container maxWidth="xl" id="shop">
-            
+        <div id="shop"></div>
+        <Container maxWidth="xl">
             <Grid container className={classes.griditem}>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.shoptitle}>
                     <h2>Check our stock!</h2>
