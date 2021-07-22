@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link as Scroll, animateScroll, scroller } from 'react-scroll'
-import { makeStyles, withStyles, Badge } from "@material-ui/core"
+import { makeStyles, withStyles, Badge, Container } from "@material-ui/core"
 import MenuIcon from '@material-ui/icons/Menu'
 
 const styles = theme => ({
@@ -120,16 +120,18 @@ export default function Navbar2(){
         console.log(x)
     }
     return(
-        <div className={classes.topnav} id="myTopnav">
-            <Link href="/about"><a>About</a></Link>
-            <a onClick={() => scrollFunc()}>
-                Shop   
-            </a>
-            <a>Contact</a>
-            <div className={classes.rightlink}>
-                <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
+        <Container maxWidth="xl">
+            <div className={classes.topnav} id="myTopnav">
+                <Link href="/about"><a>About</a></Link>
+                <a onClick={() => scrollFunc()}>
+                    Shop   
+                </a>
+                <a>Contact</a>
+                <div className={classes.rightlink}>
+                    <Link href="/cart"><a>Cart{" "}<StyledBadge /></a></Link>
+                </div>
+                <a id="icon" onClick={() => onClickFunc()}><MenuIcon /></a>
             </div>
-            <a id="icon" onClick={() => onClickFunc()}><MenuIcon /></a>
-        </div>
+        </Container>
     )
 }

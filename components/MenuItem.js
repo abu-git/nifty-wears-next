@@ -9,7 +9,11 @@ const useStyles = makeStyles((theme) => ({
         padding: 0,
         [theme.breakpoints.down('sm')]: {
             width: 400
-        }
+        },
+        transition: "transform 0.15s ease-in-out",
+        "&:hover": { 
+            transform: "scale3d(1.05, 1.05, 1)" 
+        },
     },
     cardmedia: {
         height: 200
@@ -58,12 +62,10 @@ const MenuItem = ({product}) => {
                             image={product.photo}
                             title="Nifty Wears Model"
                         />
-                        <CardContent className={classes.cardaction}>
-                            <h2>{product.title}</h2>
-                        </CardContent>
                     </CardActionArea>
                     <CardActions className={classes.cardaction}>
                         <Box className={classes.buttonmargin}>
+                            <h3>{product.title}</h3>
                             <h3 color="inherit"> ${product.price}</h3>
                             <Button 
                                 onClick={() => addCart(product.id)}

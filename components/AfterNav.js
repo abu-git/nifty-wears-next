@@ -70,7 +70,7 @@ const useStyles =  makeStyles((theme) => ({
         }
     },
     showcaseMarginTop: {
-        marginTop: "80px",
+        marginTop: "10px",/*  changed from 80px */
         [theme.breakpoints.down('sm')]: {
             marginTop: "2px"
         },
