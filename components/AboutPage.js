@@ -2,6 +2,8 @@ import Link from 'next/link'
 import  { makeStyles, Container, Grid } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
 
+import Meta from "./Meta"
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -105,8 +107,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AboutPage(){
     const classes = useStyles()
+    const aboutMeta = "Nifty Wears | About"
     return(
         <>
+            <Meta title={aboutMeta} />
             <Container maxWidth="xl">
                 <Link href="/" passHref>
                     <div className={classes.goback}>
