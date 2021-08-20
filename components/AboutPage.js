@@ -80,10 +80,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     arrowback: {
-        marginTop: "5px",
         color: "white",
-        width: "1.5em",
-        height: "1.3em",
+        marginRight: "15px",
         "&:hover": {
             cursor: "pointer"
         }
@@ -101,7 +99,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "15px",
         '&:hover': {
             cursor: "pointer"
-        }
+        },
+        display: "flex"
     }
 }))
 
