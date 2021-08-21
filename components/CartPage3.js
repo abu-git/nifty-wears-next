@@ -1,8 +1,11 @@
-import { Breadcrumbs,Container, Grid, makeStyles, Typography } from "@material-ui/core"
+import { Container, Grid, makeStyles, Typography } from "@material-ui/core"
 import Link from '@material-ui/core/Link'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+import IconButton from '@material-ui/core/IconButton'
 import Meta from "./Meta"
 import Image from 'next/image'
+import AddIcon from '@material-ui/icons/Add'
+import RemoveIcon from '@material-ui/icons/Remove'
 
 import cartStyles from '../styles/CartPage.module.css'
 
@@ -17,46 +20,32 @@ const useStyles = makeStyles((theme) => ({
         color: "white"
     },
     cartTitle: {
-        color: "white"
+        color: "white",
+        textAlign: "center"
     },
     img: {
         borderRadius: "4px"
     },
-    container: {
-        [theme.breakpoints.down('xs')]: {
-
-        }
+    add: {
+        color: "white",
     },
-    products: {
-        borderTop: "1px solid #ddd"
-    },
-    row: {
-
-    },
-    col_left: {
-
-    },
-    thumbnail: {
-
+    iconbutton: {
+        padding: "0",
+        margin: "0"
     }
 }))
 
 export default function CartPage3() {
     const classes = useStyles()
     const cartMeta = "Nifty Wears | Cart"
-    const { cart, total, getTotal }  = useContext(CartContext)
+    const { cart, total, getTotal, addCart, removeCart }  = useContext(CartContext)
 
     return(
         <>
             <Meta title={cartMeta} />
             <Container maxWidth="xl">
                 <Grid container>
-                    <Breadcrumbs separator={<NavigateNextIcon fontSize='small'/>} className={classes.breadFont}>
-                        <Link href="/">
-                            Home
-                        </Link>
-                        <Typography fontFamily="Special Elite">Shopping Cart</Typography>
-                    </Breadcrumbs>
+                    
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.cartTitle}>
                         <h2>Shopping Cart</h2>
                     </Grid>
@@ -87,7 +76,23 @@ export default function CartPage3() {
 
                                             <div className={cartStyles.col_right}>
                                                 <div className={cartStyles.quantity}>
-                                                    
+                                                    <input
+                                                        type="text"
+                                                        className={cartStyles.quantity}
+                                                        step="1"
+                                                        value={item.quantity}
+                                                        //onChange={() => addCart(item.id)}
+                                                    />
+                                                </div>
+                                                <div className={cartStyles.remove}>
+                                                    <IconButton className={classes.iconbutton}>
+                                                        <RemoveIcon style={{ color: "white"}} onClick={() => removeCart(item.id)}/>
+                                                    </IconButton> 
+                                                </div>
+                                                <div className={cartStyles.remove}>
+                                                    <IconButton className={classes.iconbutton}>
+                                                        <AddIcon style={{ color: "white"}} onClick={() => addCart(item.id)} />
+                                                    </IconButton> 
                                                 </div>
                                             </div>
                                         </li>

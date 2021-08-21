@@ -147,6 +147,13 @@ ul {
     right: 0;
     top: calc(50% - 30px);
   }
+
+  .col_right {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 30px); 
+  }
   
   .detail {
     padding: 0 0.5rem;
@@ -171,9 +178,14 @@ ul {
     color: #fff;
   }
   
-  .quantity, .remove {
+  .quantity{
     width: 50%;
     text-align: center;
+  }
+
+  .remove {
+      width: 25%;
+      text-align: center;
   }
   
   .remove svg {
