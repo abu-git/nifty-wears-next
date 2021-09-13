@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     left: {
         display: "flex",
         color: "white"
+    },
+    right: {
+        color: "white"
     }
 }))
 
@@ -43,19 +46,22 @@ export default function CartPage4() {
                         <h1>Shopping Cart</h1>
                     </Grid>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                        <section className={classes.container}>
+                        <section>
                             <ul>
                                 {cart.map(item => {
                                     return(
-                                        <li>
+                                        <li className={classes.container}>
                                             <div className={classes.left}>
                                                 <div className={classes.thumbnail}>
                                                     <Image className={classes.img} src={item.photo} alt={item.title} width="100%" height="100%" />
                                                 </div>
                                                 <div className={classes.detail}>
                                                     <h4>{item.title}</h4>
-                                                    <h6>{item.price}</h6>
+                                                    <h6>${item.price}</h6>
                                                 </div>
+                                            </div>
+                                            <div className={classes.right}>
+                                                <button>-</button>{item.quantity}<button>+</button>
                                             </div>
                                         </li>
                                     )
