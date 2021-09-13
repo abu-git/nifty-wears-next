@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
         padding: "1em"
     },
     container: {
-        display: "flex"
+        display: "flex",
+        justifyContent: "space-between"
     },
     thumbnail: {
         padding: "1em"
@@ -28,7 +29,12 @@ const useStyles = makeStyles((theme) => ({
         color: "white"
     },
     right: {
-        color: "white"
+        color: "white",
+        display: "flex",
+        //justifyContent: "flex-end"
+    },
+    rightDetail: {
+        //justifySelf: "flex-end"
     }
 }))
 
@@ -61,7 +67,9 @@ export default function CartPage4() {
                                                 </div>
                                             </div>
                                             <div className={classes.right}>
-                                                <button>-</button>{item.quantity}<button>+</button>
+                                                <div className={classes.rightDetail}>
+                                                    <button>-</button>{item.quantity}<button>+</button>
+                                                </div>
                                             </div>
                                         </li>
                                     )
