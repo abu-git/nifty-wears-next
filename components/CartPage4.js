@@ -1,4 +1,5 @@
 import { Container, Grid, makeStyles } from "@material-ui/core"
+import Image from 'next/image'
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"
@@ -15,6 +16,16 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         display: "flex"
+    },
+    thumbnail: {
+        padding: "1em"
+    },
+    img: {
+        borderRadius: "4px"
+    },
+    left: {
+        display: "flex",
+        color: "white"
     }
 }))
 
@@ -34,7 +45,21 @@ export default function CartPage4() {
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                         <section className={classes.container}>
                             <ul>
-                                {}
+                                {cart.map(item => {
+                                    return(
+                                        <li>
+                                            <div className={classes.left}>
+                                                <div className={classes.thumbnail}>
+                                                    <Image className={classes.img} src={item.photo} alt={item.title} width="100%" height="100%" />
+                                                </div>
+                                                <div className={classes.detail}>
+                                                    <h4>{item.title}</h4>
+                                                    <h6>{item.price}</h6>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    )
+                                })}
                             </ul>
                         </section>
                     </Grid>
