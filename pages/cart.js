@@ -1,4 +1,4 @@
-import CartPage from "../components/CartPage3"
+import CartPage from "../components/CartPage4"
 import Footer from "../components/Footer"
 
 
