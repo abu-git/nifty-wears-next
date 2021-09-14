@@ -10,7 +10,8 @@ import Meta from "./Meta"
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: "70vh",
-        backgroundColor: "hsl(0, 100%, 0%)"
+        backgroundColor: "hsl(0, 100%, 0%)",
+        border: "1px red solid",
     },
     h3effects: {
         color: "white",
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     buttons: {
         fontSize: "1em",
         margin: "0.6em",
+        width: "10px",
         '&:hover':{
             transform: "scale(1.1)",
             backgroundColor: "#ffca68",
@@ -43,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        border: "1px red solid",
     },
     thumbnail: {
         padding: "1em"
@@ -69,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
         //border: "1px red solid",
         display: "flex",
         alignItems: "center"
+    },
+    grid:{
+        border: "1px red solid",
     }
 }))
 
@@ -81,15 +87,15 @@ export default function CartPage4() {
         <>
             <Meta title={cartMeta} />
             <Container maxWidth="xl">
-                <Grid container className={classes.root}>
+                <Grid container className={classes.root} item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.cartTop}>
                         <h3 className={classes.h3effects}>Shopping Cart</h3>
                     </Grid>
-                    <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                        <ul>
+                    <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.grid}>
+                        
                             {cart.map(item => {
                                 return(
-                                    <li className={classes.container}>
+                                    <div className={classes.container}>
                                         <div className={classes.left}>
                                             <div className={classes.thumbnail}>
                                                 <Image className={classes.img} src={item.photo} alt={item.title} width="100%" height="100%" />
@@ -118,10 +124,9 @@ export default function CartPage4() {
                                             </div>
 
                                         </div>
-                                    </li>
+                                    </div>
                                 )
                             })}
-                        </ul>
                     </Grid>
                 </Grid>
             </Container>
