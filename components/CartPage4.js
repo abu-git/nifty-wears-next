@@ -1,6 +1,6 @@
 import { Button, Container, Grid, makeStyles } from "@material-ui/core"
 import Image from 'next/image'
-import DeleteIcon from '@material-ui/icons/Delete'
+import DeleteIcon from '@material-ui/icons/DeleteOutline'
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"
@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
             color: "black"
         }
     },
+    delete: {
+        fontSize: "1.5em",
+        marginTop: "2px"
+    },
     cartTop: {
         padding: "1em"
     },
@@ -58,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         //justifyContent: "flex-end"
     },
     rightDetail: {
-        paddingTop: "2em"
+        paddingTop: "2em",
     }
 }))
 
@@ -104,6 +108,7 @@ export default function CartPage4() {
                                                     onClick={() => addCart(item.id)} 
                                                     className={classes.buttons}>+
                                                 </Button>
+                                                <DeleteIcon className={classes.delete}></DeleteIcon>
                                             </div>
 
                                         </div>
