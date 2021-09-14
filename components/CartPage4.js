@@ -24,16 +24,19 @@ const useStyles = makeStyles((theme) => ({
     },
     buttons: {
         fontSize: "1em",
-        margin: "1em",
+        margin: "0.6em",
         '&:hover':{
             transform: "scale(1.1)",
             backgroundColor: "#ffca68",
             color: "black"
         }
     },
+    deleteDiv: {
+        marginTop: "3px"
+    },
     delete: {
-        fontSize: "1.5em",
-        marginTop: "2px"
+        fontSize: "2em",
+        //paddingTop: "6px"
     },
     cartTop: {
         padding: "1em"
@@ -62,7 +65,10 @@ const useStyles = makeStyles((theme) => ({
         //justifyContent: "flex-end"
     },
     rightDetail: {
-        paddingTop: "2em",
+        //paddingTop: ".5em",
+        //border: "1px red solid",
+        display: "flex",
+        alignItems: "center"
     }
 }))
 
@@ -108,7 +114,7 @@ export default function CartPage4() {
                                                     onClick={() => addCart(item.id)} 
                                                     className={classes.buttons}>+
                                                 </Button>
-                                                <DeleteIcon className={classes.delete}></DeleteIcon>
+                                                <div className={classes.deleteDiv}><DeleteIcon className={classes.delete}></DeleteIcon></div>
                                             </div>
 
                                         </div>
