@@ -88,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
+
 function SimpleBadge(props) {
     const { classes } = props
     const { quantity } = useContext(CartContext)
@@ -99,6 +100,7 @@ function SimpleBadge(props) {
 }
 
 const StyledBadge = withStyles(styles)(SimpleBadge)
+
 
 export default function Navbar2(){
     const classes = useStyles()

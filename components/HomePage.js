@@ -6,7 +6,7 @@ import Meta from "./Meta"
 import LogoPlacement from "./LogoPlacement"
 import AfterNav from "./AfterNav"
 import Footer from "./Footer"
-import Navbar from "./Navbar2"
+import Navbar from "./Navbar3"
 
 const useStyles = makeStyles((theme) => ({
     root: {
