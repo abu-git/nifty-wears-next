@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     },
     promoCode: {
         marginTop: "15px",
-        marginBottom: "15px"
+        marginBottom: "15px",
     },
     promotion: {
         color: "white",
@@ -114,6 +114,13 @@ const useStyles = makeStyles((theme) => ({
             border: "2px solid black",
             backgroundColor: "#26eb5a"
         }
+    },
+    summary: {
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center"
     }
 }))
 
@@ -177,7 +184,12 @@ export default function CartPage4() {
                                 <input className={classes.input} type="text" />
                                 <button className={classes.promoButton}><ArrowForwardIos fontSize="small" /></button>
                             </div>
-                        </div>                            
+                        </div>                           
+                    </Grid>
+                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.summary}>
+                        <h5>Subtotal</h5>
+                        <h5>Tax</h5>
+                        <h4>Total</h4>
                     </Grid>
                 </Grid>
             </Container>

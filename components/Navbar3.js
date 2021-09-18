@@ -90,10 +90,10 @@ export default function Navbar3(){
             </div>
             <hr/>
             <div className={classes.container}>
-                <Link href="/about"><div className={classes.navbutton}>About</div></Link>
+                <Link href="/about" passHref><div className={classes.navbutton}>About</div></Link>
                 <div className={classes.navbutton} onClick={() => scrollFunc()}>Shop</div>
                 <div className={classes.navbutton}>Contact</div>
-                <Link href="/cart"><div className={classes.cartbutton}>Cart{" "}<StyledBadge /></div></Link>
+                <Link href="/cart" passHref><div className={classes.cartbutton}>Cart{" "}<StyledBadge /></div></Link>
             </div>
         </Container>
     )
