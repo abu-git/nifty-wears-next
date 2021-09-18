@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: "70vh",
         backgroundColor: "hsl(0, 100%, 0%)",
-        border: "1px red solid",
+        //border: "1px red solid",
     },
     h3effects: {
         color: "white",
@@ -34,7 +34,13 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     deleteDiv: {
-        marginTop: "3px"
+        marginTop: "3px",
+        cursor: "pointer",
+        '&:hover': {
+            transform: "scale(1.1)",
+            backgroundColor: "#ffca68",
+            color: "black"
+        }
     },
     delete: {
         fontSize: "2em",
@@ -46,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         display: "flex",
         justifyContent: "space-between",
-        border: "1px red solid",
+        //border: "1px red solid",
     },
     thumbnail: {
         padding: "1em"
@@ -74,7 +80,20 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center"
     },
     grid:{
-        border: "1px red solid",
+        //border: "1px red solid",
+    },
+    promotion: {
+        color: "white",
+        display: "flex",
+        flexDirection: "column"
+    },
+    input: {
+        transition: "all 0.25s linear",
+        outline: "none",
+        width: "80%"
+    },
+    promoButton: {
+        width: "20%"
     }
 }))
 
@@ -120,13 +139,22 @@ export default function CartPage4() {
                                                     onClick={() => addCart(item.id)} 
                                                     className={classes.buttons}>+
                                                 </Button>
-                                                <div className={classes.deleteDiv}><DeleteIcon className={classes.delete}></DeleteIcon></div>
+                                                <div onClick={() => removeCart(item.id)} className={classes.deleteDiv}><DeleteIcon className={classes.delete}></DeleteIcon></div>
                                             </div>
 
                                         </div>
                                     </div>
                                 )
                             })}
+                    </Grid>
+                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.promoCode}>
+                        <div className={classes.promotion}>
+                            <label>Have a Promo Code?</label>
+                            <div>
+                                <input className={classes.input} type="text" />
+                                <button className={classes.promoButton}></button>
+                            </div>
+                        </div>                            
                     </Grid>
                 </Grid>
             </Container>
