@@ -1,6 +1,7 @@
 import { Button, Container, Grid, makeStyles } from "@material-ui/core"
 import Image from 'next/image'
 import DeleteIcon from '@material-ui/icons/DeleteOutline'
+import { ArrowForwardIos } from "@material-ui/icons"
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"
@@ -37,9 +38,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "3px",
         cursor: "pointer",
         '&:hover': {
-            transform: "scale(1.1)",
-            backgroundColor: "#ffca68",
-            color: "black"
+            transform: "scale(1.2)",
+            /*backgroundColor: "#ffca68",
+            color: "black"*/
         }
     },
     delete: {
@@ -82,6 +83,10 @@ const useStyles = makeStyles((theme) => ({
     grid:{
         //border: "1px red solid",
     },
+    promoCode: {
+        marginTop: "15px",
+        marginBottom: "15px"
+    },
     promotion: {
         color: "white",
         display: "flex",
@@ -90,10 +95,25 @@ const useStyles = makeStyles((theme) => ({
     input: {
         transition: "all 0.25s linear",
         outline: "none",
-        width: "80%"
+        width: "80%",
+        fontSize: "1rem",
+        padding: "1.1rem 0 0.5rem 1.8rem",
+        border: "2px solid #ffca68",
+        borderRadius: "2rem 0 0 2rem",
+        '&:hover': {
+            border: "2px solid #26eb5a"
+        }
     },
     promoButton: {
-        width: "20%"
+        width: "20%",
+        padding: "0.6rem 0",
+        borderRadius: "0 2rem 2rem 0",
+        backgroundColor: "#ffca68",
+        color: "black",
+        '&:hover': {
+            border: "2px solid black",
+            backgroundColor: "#26eb5a"
+        }
     }
 }))
 
@@ -114,6 +134,7 @@ export default function CartPage4() {
                         
                             {cart.map(item => {
                                 return(
+                                    <>
                                     <div className={classes.container}>
                                         <div className={classes.left}>
                                             <div className={classes.thumbnail}>
@@ -144,15 +165,17 @@ export default function CartPage4() {
 
                                         </div>
                                     </div>
+                                    <hr/>
+                                    </>
                                 )
                             })}
                     </Grid>
                     <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.promoCode}>
                         <div className={classes.promotion}>
                             <label>Have a Promo Code?</label>
-                            <div>
+                            <div className={classes.inputContainer}>
                                 <input className={classes.input} type="text" />
-                                <button className={classes.promoButton}></button>
+                                <button className={classes.promoButton}><ArrowForwardIos fontSize="small" /></button>
                             </div>
                         </div>                            
                     </Grid>
