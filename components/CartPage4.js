@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         display: "flex",
         flexDirection: "column",
-        width: "80%"
+        width: "90%"
     },
     input: {
         transition: "all 0.25s linear",
@@ -182,12 +182,13 @@ const useStyles = makeStyles((theme) => ({
     summaryh4: {
         margin: "0.5rem",
         padding: "0.5rem",
-        color: "#ffca68"
+        color: "#ffca68",
+        fontStyle: "bold"
     },
     summaryh5: {
         margin: "0.5rem",
         padding: "0.5rem",
-        color: "#ffca68"
+        color: "white"
     }
 }))
 

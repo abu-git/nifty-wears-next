@@ -1,6 +1,9 @@
 import { makeStyles, Box, Grid, Button, Card, CardActions, CardActionArea, CardContent, CardMedia } from '@material-ui/core'
+import { Collapse, IconButton } from '@material-ui/core'
+import { Close } from '@material-ui/icons'
+import Alert from '@material-ui/lab/Alert'
 import { CartContext } from '../context/CartContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 const useStyles = makeStyles((theme) => ({
     cardroot: {
@@ -52,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 const MenuItem = ({product}) => {
     const classes = useStyles()
     const { addCart } = useContext(CartContext) 
+    const [open, setOpen] = useState(false)
     return(
     <>
         <Grid item lg={4} md={6} sm={12} xs={12} className={classes.griditem}>
@@ -68,11 +72,29 @@ const MenuItem = ({product}) => {
                             <h3>{product.title}</h3>
                             <h3 color="inherit"> ${product.price}</h3>
                             <Button 
-                                onClick={() => addCart(product.id)}
+                                onClick={() => {addCart(product.id); {setOpen(true)} }}
                                 className={classes.buttonhover} 
                                 variant="outlined" 
                                 color="inherit">Add to Cart
                             </Button>
+                            <div>
+                                <Collapse in={open}>
+                                    <Alert
+                                        action={
+                                            <IconButton
+                                                aria-label="close"
+                                                color="inherit"
+                                                size="small"
+                                                onClick={() => { setOpen(false)}}
+                                            >
+                                                <Close fontSize="inherit" />
+                                            </IconButton>
+                                        }
+                                    >
+                                        Added to Cart!
+                                    </Alert>
+                                </Collapse>
+                            </div>
                         </Box>
                     </CardActions>
                 </Card>

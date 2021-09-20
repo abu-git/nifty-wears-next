@@ -23,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         color: "white",
         backgroundColor: "black",
-        height: "45px",
-        
+        height: "45px"
     },
     navbutton: {
         padding: "10px",
