@@ -19,10 +19,16 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "2em"
     },
     h4effects: {
-        fontSize: "1.2em"
+        fontSize: "1.2em",
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "0.9em"
+        }
     },
     price: {
-        fontSize: "0.9em"
+        fontSize: "0.9em",
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "0.8em"
+        }
     },
     buttons: {
         fontSize: "1em",
@@ -32,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
             transform: "scale(1.1)",
             backgroundColor: "#ffca68",
             color: "black"
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "0.8em",
+            margin: "0.4em"
         }
     },
     deleteDiv: {
@@ -46,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
     delete: {
         fontSize: "2em",
         //paddingTop: "6px"
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "1.5em"
+        }
     },
     cartTop: {
         padding: "1em"
@@ -56,7 +69,13 @@ const useStyles = makeStyles((theme) => ({
         //border: "1px red solid",
     },
     thumbnail: {
-        padding: "1em"
+        padding: "1em",
+        [theme.breakpoints.down('sm')]: {
+            display: "none"
+        },
+        [theme.breakpoints.down('xs')]: {
+            display: "none"
+        }
     },
     img: {
         borderRadius: "4px"
@@ -65,13 +84,13 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         color: "white",
         //border: "1px red solid",
-        width: "40%"
+        width: "50%"
     },
     right: {
         color: "white",
         display: "flex",
         //border: "1px red solid",
-        width: "40%"
+        width: "50%"
         //justifyContent: "flex-end"
     },
     rightDetail: {
@@ -187,9 +206,9 @@ export default function CartPage4() {
                         </div>                           
                     </Grid>
                     <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.summary}>
-                        <h5>Subtotal</h5>
-                        <h5>Tax</h5>
-                        <h4>Total</h4>
+                        <h5 className={classes.summaryh5}>Subtotal: {"  $" + total} </h5>
+                        <h5 className={classes.summaryh5}>Tax: $0.00</h5>
+                        <h4 className={classes.summaryh4}>Total: {"  $" + total}</h4>
                     </Grid>
                 </Grid>
             </Container>
