@@ -70,9 +70,6 @@ const useStyles = makeStyles((theme) => ({
     },
     thumbnail: {
         padding: "1em",
-        [theme.breakpoints.down('sm')]: {
-            display: "none"
-        },
         [theme.breakpoints.down('xs')]: {
             display: "none"
         }
@@ -89,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     right: {
         color: "white",
         display: "flex",
+        marginRight: "4px",
         //border: "1px red solid",
         width: "50%"
         //justifyContent: "flex-end"
