@@ -102,6 +102,7 @@ const CartContextProvider = (props) => {
 		let result = cart.reduce((previous, item) => {
 			return previous + (item.price * item.quantity)
 		},0)
+		result = Math.round(result * 100)/100
 		setTotal(result)
 		sessionStorage.setItem('total', JSON.stringify(result))
 	}
