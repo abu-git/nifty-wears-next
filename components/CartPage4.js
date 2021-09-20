@@ -81,15 +81,16 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         color: "white",
         //border: "1px red solid",
-        width: "50%"
+        width: "50%",
+        justifyContent: "center"
     },
     right: {
         color: "white",
         display: "flex",
         marginRight: "4px",
         //border: "1px red solid",
-        width: "50%"
-        //justifyContent: "flex-end"
+        width: "50%",
+        justifyContent: "center"
     },
     rightDetail: {
         //paddingTop: ".5em",
@@ -101,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
         //border: "1px red solid",
     },
     promoCode: {
-        marginTop: "15px",
+        marginTop: "30px",
         marginBottom: "15px",
     },
     promotion: {
