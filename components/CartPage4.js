@@ -1,7 +1,8 @@
-import { Button, Container, Grid, makeStyles } from "@material-ui/core"
+import { IconButton, Button, Container, Grid, makeStyles } from "@material-ui/core"
 import Image from 'next/image'
+import Link from 'next/link'
 import DeleteIcon from '@material-ui/icons/DeleteOutline'
-import { ArrowForwardIos } from "@material-ui/icons"
+import { ArrowBack, ArrowForwardIos } from "@material-ui/icons"
 
 import { CartContext } from "../context/CartContext"
 import { useContext } from "react"
@@ -13,6 +14,40 @@ const useStyles = makeStyles((theme) => ({
         minHeight: "70vh",
         backgroundColor: "hsl(0, 100%, 0%)",
         //border: "1px red solid",
+    },
+    headerContainer: {
+        display: "flex",
+        justifyContent: "center"
+    },
+    header: {
+        padding: "0",
+        margin: "0",
+    },
+    h3header: {
+        color: "white"
+    },
+    arrowback: {
+        color: "white",
+        marginRight: "15px",
+        "&:hover": {
+            cursor: "pointer"
+        }
+    },
+    backtext: {
+        color: "white",
+        paddingBottom: "3px",
+        "&:hover": {
+            //color: "#ffca68",
+            //textDecoration: "underline",
+            cursor: "pointer"
+        }
+    },
+    goback: {
+        marginTop: "15px",
+        '&:hover': {
+            cursor: "pointer"
+        },
+        display: "flex"
     },
     h3effects: {
         color: "white",
@@ -104,11 +139,14 @@ const useStyles = makeStyles((theme) => ({
     promoCode: {
         marginTop: "30px",
         marginBottom: "15px",
+        display: "flex",
+        justifyContent: "center"
     },
     promotion: {
         color: "white",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        width: "80%"
     },
     input: {
         transition: "all 0.25s linear",
@@ -116,21 +154,22 @@ const useStyles = makeStyles((theme) => ({
         width: "80%",
         fontSize: "1rem",
         padding: "1.1rem 0 0.5rem 1.8rem",
-        border: "2px solid #ffca68",
+        border: "2px solid black",
         borderRadius: "2rem 0 0 2rem",
         '&:hover': {
-            border: "2px solid #26eb5a"
+            border: "2px solid #ffca68"
         }
     },
     promoButton: {
         width: "20%",
         padding: "0.6rem 0",
         borderRadius: "0 2rem 2rem 0",
-        backgroundColor: "#ffca68",
-        color: "black",
+        backgroundColor: "black",
+        color: "white",
         '&:hover': {
             border: "2px solid black",
-            backgroundColor: "#26eb5a"
+            backgroundColor: "#ffca68",
+            color: "black",
         }
     },
     summary: {
@@ -139,6 +178,16 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
+    },
+    summaryh4: {
+        margin: "0.5rem",
+        padding: "0.5rem",
+        color: "#ffca68"
+    },
+    summaryh5: {
+        margin: "0.5rem",
+        padding: "0.5rem",
+        color: "#ffca68"
     }
 }))
 
@@ -151,6 +200,19 @@ export default function CartPage4() {
         <>
             <Meta title={cartMeta} />
             <Container maxWidth="xl">
+                <div className={classes.headerContainer}>
+                    <IconButton className={classes.header}>
+                        <Image width="30px" height="30px" alt="Nifty Wears logo" src="/assets/favicon_io/favicon-32x32.png" />
+                        <h3 className={classes.h3header}>Nifty Wears</h3>
+                    </IconButton>
+                </div>
+                <hr/>
+                <Link href="/" passHref>
+                    <div className={classes.goback}>
+                        <ArrowBack className={classes.arrowback} />
+                        <span className={classes.backtext}> Back to home</span>
+                    </div>
+                </Link>
                 <Grid container className={classes.root} item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.cartTop}>
                         <h3 className={classes.h3effects}>Shopping Cart</h3>

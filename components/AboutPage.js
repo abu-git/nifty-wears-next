@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import  { makeStyles, Container, Grid } from '@material-ui/core'
+import  { IconButton, makeStyles, Container, Grid } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
+import Image from 'next/image'
 
 import Meta from "./Meta"
 
@@ -101,6 +102,17 @@ const useStyles = makeStyles((theme) => ({
             cursor: "pointer"
         },
         display: "flex"
+    },
+    headerContainer: {
+        display: "flex",
+        justifyContent: "center"
+    },
+    header: {
+        padding: "0",
+        margin: "0",
+    },
+    h3effects: {
+        color: "white"
     }
 }))
 
@@ -111,6 +123,13 @@ export default function AboutPage(){
         <>
             <Meta title={aboutMeta} />
             <Container maxWidth="xl">
+                <div className={classes.headerContainer}>
+                    <IconButton className={classes.header}>
+                        <Image width="30px" height="30px" alt="Nifty Wears logo" src="/assets/favicon_io/favicon-32x32.png" />
+                        <h3 className={classes.h3effects}>Nifty Wears</h3>
+                    </IconButton>
+                </div>
+                <hr/>
                 <Link href="/" passHref>
                     <div className={classes.goback}>
                         <ArrowBack className={classes.arrowback} />
