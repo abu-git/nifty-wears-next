@@ -96,7 +96,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cartTop: {
-        padding: "1em"
+        padding: "1em",
+        display: "flex",
+        justifyContent: "center",
     },
     container: {
         display: "flex",
@@ -152,11 +154,16 @@ const useStyles = makeStyles((theme) => ({
         transition: "all 0.25s linear",
         outline: "none",
         width: "80%",
+        backgroundColor: "#888",
         fontSize: "1rem",
         padding: "1.1rem 0 0.5rem 1.8rem",
         border: "2px solid black",
         borderRadius: "2rem 0 0 2rem",
         '&:hover': {
+            border: "2px solid #ffca68"
+        },
+        '&:focus': {
+            backgroundColor: "white",
             border: "2px solid #ffca68"
         }
     },
