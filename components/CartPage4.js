@@ -209,6 +209,10 @@ const useStyles = makeStyles((theme) => ({
             color: "black",
             border: "2px solid black"
         }
+    },
+    noItems: {
+        display: "flex",
+        justifyContent: "center"
     }
 }))
 
@@ -298,7 +302,14 @@ export default function CartPage4() {
                         </Grid>
                         </>
                     }
-                    
+
+                    {total === 0 &&
+                        <>
+                            <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.noItems}>
+                                <h4 className={classes.summaryh4}>No items in cart.</h4>
+                            </Grid>
+                        </>
+                    }
                 </Grid>
             </Container>
         </>
