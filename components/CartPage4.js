@@ -189,6 +189,26 @@ const useStyles = makeStyles((theme) => ({
         margin: "0.5rem",
         padding: "0.5rem",
         color: "white"
+    },
+    proceed: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "35px",
+        marginBottom: "35px"
+    },
+    proceedButton: {
+        backgroundColor: "black",
+        border: "2px solid white",
+        borderRadius: "10px",
+        color: "white",
+        padding: "15px",
+        '&:hover':{
+            transform: "scale(1.1)",
+            backgroundColor: "#ffca68",
+            color: "black",
+            border: "2px solid black"
+        }
     }
 }))
 
@@ -250,7 +270,6 @@ export default function CartPage4() {
                                                 </Button>
                                                 <div onClick={() => removeCart(item.id)} className={classes.deleteDiv}><DeleteIcon className={classes.delete}></DeleteIcon></div>
                                             </div>
-
                                         </div>
                                     </div>
                                     <hr/>
@@ -258,20 +277,28 @@ export default function CartPage4() {
                                 )
                             })}
                     </Grid>
-                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.promoCode}>
-                        <div className={classes.promotion}>
-                            <label>Have a Promo Code?</label>
-                            <div className={classes.inputContainer}>
-                                <input className={classes.input} type="text" />
-                                <button className={classes.promoButton}><ArrowForwardIos fontSize="small" /></button>
-                            </div>
-                        </div>                           
-                    </Grid>
-                    <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.summary}>
-                        <h5 className={classes.summaryh5}>Subtotal: {"  $" + total} </h5>
-                        <h5 className={classes.summaryh5}>Tax: $0.00</h5>
-                        <h4 className={classes.summaryh4}>Total: {"  $" + total}</h4>
-                    </Grid>
+                    {cart.length > 0 &&
+                        <> 
+                        <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.promoCode}>
+                            <div className={classes.promotion}>
+                                <label>Have a Promo Code?</label>
+                                <div className={classes.inputContainer}>
+                                    <input className={classes.input} type="text" />
+                                    <button className={classes.promoButton}><ArrowForwardIos fontSize="small" /></button>
+                                </div>
+                            </div>                           
+                        </Grid>
+                        <Grid item xl={6} lg={6} md={12} sm={12} xs={12} className={classes.summary}>
+                            <h5 className={classes.summaryh5}>Subtotal: {"  $" + total} </h5>
+                            <h5 className={classes.summaryh5}>Tax: $0.00</h5>
+                            <h4 className={classes.summaryh4}>Total: {"  $" + total}</h4>
+                        </Grid>
+                        <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.proceed}>
+                                <button className={classes.proceedButton}>Continue to Payment</button>
+                        </Grid>
+                        </>
+                    }
+                    
                 </Grid>
             </Container>
         </>
