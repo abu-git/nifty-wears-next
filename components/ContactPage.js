@@ -43,6 +43,13 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         height: "100%"
+    },
+    input: {
+        padding: "1em",
+        color: "black",
+        backgroundColor: "#c9c3b1",
+        borderRadius: "10px",
+        border: "2px solid white"
     }
 }))
 
@@ -76,7 +83,7 @@ export default function Contact() {
                     <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
                         <div className={classes.formContainer}>
                             <form>
-                                
+                                <input className={classes.input} type="text" placeholder="First Name" />
                             </form>
                         </div>
                     </Grid>
