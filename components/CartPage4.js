@@ -203,6 +203,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px",
         color: "white",
         padding: "15px",
+        cursor: "pointer",
         '&:hover':{
             transform: "scale(1.1)",
             backgroundColor: "#ffca68",
