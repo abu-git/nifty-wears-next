@@ -42,11 +42,17 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100%"
+        height: "100%",
+        [theme.breakpoints.down('md')]: {
+            marginTop: "1em"
+        }
     },
     formContainer: {
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        //border: "1px solid red"
     },
     input_half: {
         padding: "1em",
@@ -59,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
         '&:focus': {
             border: "2px solid white",
             backgroundColor: "white"
-        }
+        },
     },
     input_full: {
         padding: "1em",
@@ -86,6 +92,23 @@ const useStyles = makeStyles((theme) => ({
         '&:focus': {
             border: "2px solid white",
             backgroundColor: "white"
+        }
+    },
+    submit_wrapper: {
+        textAlign: "center"
+    },
+    message_button: {
+        backgroundColor: "black",
+        border: "2px solid white",
+        borderRadius: "10px",
+        color: "white",
+        padding: "15px",
+        margin: "1em",
+        cursor: "pointer",
+        '&:hover': {
+            backgroundColor: "#ffca68",
+            transform: "scale(1.1)",
+            color: "black"
         }
     }
 }))
@@ -118,14 +141,12 @@ export default function Contact() {
                     </Grid>
                     
                     <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
-                        <div className={classes.formContainer}>
-                            <form>
-                                <input className={classes.input_half} type="text" placeholder="First Name" />
-                                <input className={classes.input_half} type="text" placeholder="Last Name" />
-                                <input className={classes.input_full} type="email" placeholder="Email" />
-                                <textarea className={classes.input_comments} />
-                            </form>
-                        </div>
+                        <form className={classes.formContainer}> 
+                            <input className={classes.input_full} type="text" placeholder="Name" />
+                            <input className={classes.input_full} type="email" placeholder="Email" />
+                            <textarea className={classes.input_comments} placeholder="Leave us a message..." />
+                            <div className={classes.submit_wrapper}><button className={classes.message_button}>Send Message!</button></div>
+                        </form>
                     </Grid>
                 </Grid>
                 
