@@ -44,12 +44,49 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         height: "100%"
     },
-    input: {
+    formContainer: {
+        display: "flex",
+        justifyContent: "center"
+    },
+    input_half: {
         padding: "1em",
         color: "black",
         backgroundColor: "#c9c3b1",
         borderRadius: "10px",
-        border: "2px solid white"
+        border: "2px solid black",
+        margin: "1em",
+        width: "40%",
+        '&:focus': {
+            border: "2px solid white",
+            backgroundColor: "white"
+        }
+    },
+    input_full: {
+        padding: "1em",
+        color: "black",
+        backgroundColor: "#c9c3b1",
+        borderRadius: "10px",
+        border: "2px solid white",
+        margin: "1em",
+        width: "85%",
+        '&:focus': {
+            border: "2px solid white",
+            backgroundColor: "white"
+        }
+    },
+    input_comments: {
+        height: "200px",
+        width: "85%",
+        padding: "1em",
+        color: "black",
+        backgroundColor: "#c9c3b1",
+        borderRadius: "10px",
+        border: "2px solid white",
+        margin: "1em",
+        '&:focus': {
+            border: "2px solid white",
+            backgroundColor: "white"
+        }
     }
 }))
 
@@ -83,7 +120,10 @@ export default function Contact() {
                     <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
                         <div className={classes.formContainer}>
                             <form>
-                                <input className={classes.input} type="text" placeholder="First Name" />
+                                <input className={classes.input_half} type="text" placeholder="First Name" />
+                                <input className={classes.input_half} type="text" placeholder="Last Name" />
+                                <input className={classes.input_full} type="email" placeholder="Email" />
+                                <textarea className={classes.input_comments} />
                             </form>
                         </div>
                     </Grid>
