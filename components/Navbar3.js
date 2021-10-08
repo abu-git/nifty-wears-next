@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "10px",
         textAlign: "center",
         fontSize: "1em",
+        cursor: "pointer",
         '&:hover': {
             backgroundColor: "#ffca68",
             color: "black"
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "10px",
         textAlign: "center",
         fontSize: "1em",
+        cursor: "pointer",
         '&:hover': {
             backgroundColor: "#ffca68",
             color: "black"
@@ -46,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
     },
     headerContainer: {
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        borderBottom: "1px solid white"
     },
     header: {
         padding: "0",
@@ -54,6 +57,30 @@ const useStyles = makeStyles((theme) => ({
     },
     h3effects: {
         color: "white"
+    },
+    loginSignup: {
+        display: "flex",
+        justifyContent: "flex-end",
+        padding: "0",
+        margin: "0",
+        borderBottom: "1px solid white"
+    },
+    login: {
+        marginRight: "0.8em",
+        '&:hover': {
+            color: "#ffca68",
+            cursor: "pointer"
+        }
+    },
+    divider: {
+        marginRight: "0.8em"
+    },
+    signup: {
+        marginRight: "0.5em",
+        '&:hover': {
+            color: "#ffca68",
+            cursor: "pointer"
+        }
     }
 }))
 
@@ -87,7 +114,9 @@ export default function Navbar3(){
                     <h3 className={classes.h3effects}>Nifty Wears</h3>
                 </IconButton>
             </div>
-            <hr/>
+            <div className={classes.loginSignup}>
+                <h5 className={classes.login}>Login</h5><h5 className={classes.divider}>|</h5><h5 className={classes.signup}>Sign Up</h5>
+            </div>
             <div className={classes.container}>
                 <Link href="/about" passHref><div className={classes.navbutton}>About</div></Link>
                 <div className={classes.navbutton} onClick={() => scrollFunc()}>Shop</div>

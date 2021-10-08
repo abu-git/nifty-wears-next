@@ -90,8 +90,7 @@ const MenuItem = ({product}) => {
                                                 <Close fontSize="inherit" />
                                             </IconButton>
                                         }
-                                    >
-                                        Added to Cart!
+                                    >Added to Cart!
                                     </Alert>
                                 </Collapse>
                             </div>
