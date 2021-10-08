@@ -61,9 +61,10 @@ const useStyles = makeStyles((theme) => ({
     loginSignup: {
         display: "flex",
         justifyContent: "flex-end",
+        alignItems: "center",
         padding: "0",
         margin: "0",
-        //borderBottom: "1px solid white",
+        height: "50px",
         backgroundColor: "#0a0a0a"
     },
     login: {
