@@ -68,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#0a0a0a"
     },
     login: {
+        fontSize: "0.85em",
         marginRight: "0.8em",
         '&:hover': {
             color: "#ffca68",
@@ -78,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: "0.8em"
     },
     signup: {
+        fontSize: "0.85em",
         marginRight: "0.5em",
         '&:hover': {
             color: "#ffca68",

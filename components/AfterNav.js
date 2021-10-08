@@ -18,6 +18,7 @@ const useStyles =  makeStyles((theme) => ({
         color: "black",
         padding: "0.25em 0.5em",
         borderRadius: "0.125em",
+        marginTop: "0",
         marginBottom: "0.5em",
         [theme.breakpoints.down('sm')]: {
             fontSize: "1.3em"
@@ -35,14 +36,13 @@ const useStyles =  makeStyles((theme) => ({
         display: "flex",
         isolation: "isolate",
         /*alignItems: "center",
-        marginTop: "50px",
-        /*border: "1px solid red"*/
+        marginTop: "50px",*/
+        border: "1px solid white",
         [theme.breakpoints.down('sm')]: {
             minheight: "30vh"
         }
     },
     showcaseIntro: {
-        /*font: `"Yellowtail", cursive`,*/
         width: "50%",
         padding: "2em",
         paddingTop: "min(15vh, 10rem)",
@@ -50,7 +50,7 @@ const useStyles =  makeStyles((theme) => ({
         /*textAlign: "center",
         fontSize: "1.8rem",
         fontStyle: "italic"*/
-
+        //border: "1px solid red",
         '&::after' : {
             content: "",
             position: "absolute",
@@ -61,11 +61,11 @@ const useStyles =  makeStyles((theme) => ({
             mixBlendMode: "multiply"
         },
         [theme.breakpoints.down('sm')]: {
-            paddingTop: "min(19vh, 12rem)",
+            paddingTop: "min(10vh, 5rem)",
             width: "100%"
         },
         [theme.breakpoints.down('md')]: {
-            paddingTop: "min(19vh, 12rem)",
+            paddingTop: "min(10vh, 5rem)",
             width: "90%"
         }
     },
