@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     headerContainer: {
         display: "flex",
         justifyContent: "center",
-        borderBottom: "1px solid white"
+        //borderBottom: "1px solid white"
     },
     header: {
         padding: "0",
@@ -63,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "flex-end",
         padding: "0",
         margin: "0",
-        borderBottom: "1px solid white"
+        //borderBottom: "1px solid white",
+        backgroundColor: "#0a0a0a"
     },
     login: {
         marginRight: "0.8em",
