@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import LoginSignUp from "./LoginSignUpNav"
 
 const styles = theme => ({
     customBadge: {
@@ -58,34 +59,7 @@ const useStyles = makeStyles((theme) => ({
     h3effects: {
         color: "white"
     },
-    loginSignup: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        padding: "0",
-        margin: "0",
-        height: "50px",
-        backgroundColor: "#0a0a0a"
-    },
-    login: {
-        fontSize: "0.85em",
-        marginRight: "0.8em",
-        '&:hover': {
-            color: "#ffca68",
-            cursor: "pointer"
-        }
-    },
-    divider: {
-        marginRight: "0.8em"
-    },
-    signup: {
-        fontSize: "0.85em",
-        marginRight: "0.5em",
-        '&:hover': {
-            color: "#ffca68",
-            cursor: "pointer"
-        }
-    }
+    
 }))
 
 function SimpleBadge(props) {
@@ -118,9 +92,8 @@ export default function Navbar3(){
                     <h3 className={classes.h3effects}>Nifty Wears</h3>
                 </IconButton>
             </div>
-            <div className={classes.loginSignup}>
-                <h5 className={classes.login}>Login</h5><h5 className={classes.divider}>|</h5><h5 className={classes.signup}>Sign Up</h5>
-            </div>
+            {/* Login and SignUp is imported */}
+            <LoginSignUp />
             <div className={classes.container}>
                 <Link href="/about" passHref><div className={classes.navbutton}>About</div></Link>
                 <div className={classes.navbutton} onClick={() => scrollFunc()}>Shop</div>
