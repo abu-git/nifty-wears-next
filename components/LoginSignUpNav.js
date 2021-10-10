@@ -34,10 +34,11 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     dialog: {
-        backgroundColor: "#f0e4af",
+        backgroundColor: "#ffca68",
     },
     pFont: {
-        fontSize: "1em"
+        fontSize: "1em",
+        color: "black"
     },
     dialogTitle: {
         //border: "1px solid red",
@@ -49,9 +50,12 @@ const useStyles = makeStyles((theme) => ({
         //padding: "0.5em"
     },
     buttonfx: {
-        backgroundColor: "#d1ba54",
-        color: "black",
+        backgroundColor: "black",
+        color: "white",
         height: "4em",
+        '&:hover': {
+            color: "black"
+        }
     }
 }))
 
@@ -167,6 +171,7 @@ export default function LoginSignUpNav() {
                         <TextField 
                             //autoFocus
                             variant="outlined"
+                            //color="secondary"
                             margin="dense"
                             id="email"
                             label="email"
